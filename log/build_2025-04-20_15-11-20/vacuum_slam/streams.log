@@ -1,0 +1,37 @@
+[5.172s] Invoking command in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam': PYTHONPATH=/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vacuum_slam build --build-base /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build install --record /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log --single-version-externally-managed install_data
+[6.796s] running egg_info
+[6.801s] creating ../../build/vacuum_slam/vacuum_slam.egg-info
+[6.803s] writing ../../build/vacuum_slam/vacuum_slam.egg-info/PKG-INFO
+[6.807s] writing dependency_links to ../../build/vacuum_slam/vacuum_slam.egg-info/dependency_links.txt
+[6.812s] writing entry points to ../../build/vacuum_slam/vacuum_slam.egg-info/entry_points.txt
+[6.813s] writing requirements to ../../build/vacuum_slam/vacuum_slam.egg-info/requires.txt
+[6.813s] writing top-level names to ../../build/vacuum_slam/vacuum_slam.egg-info/top_level.txt
+[6.814s] writing manifest file '../../build/vacuum_slam/vacuum_slam.egg-info/SOURCES.txt'
+[6.818s] reading manifest file '../../build/vacuum_slam/vacuum_slam.egg-info/SOURCES.txt'
+[6.828s] writing manifest file '../../build/vacuum_slam/vacuum_slam.egg-info/SOURCES.txt'
+[6.829s] running build
+[6.830s] running build_py
+[6.831s] creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build
+[6.831s] creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build/lib
+[6.832s] creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build/lib/vacuum_slam
+[6.832s] copying vacuum_slam/__init__.py -> /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build/lib/vacuum_slam
+[6.833s] running install
+[6.834s] running install_lib
+[6.836s] creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam
+[6.837s] copying /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build/lib/vacuum_slam/__init__.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam
+[6.838s] byte-compiling /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam/__init__.py to __init__.cpython-310.pyc
+[6.841s] running install_data
+[6.842s] creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index
+[6.843s] creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index/resource_index
+[6.844s] creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index/resource_index/packages
+[6.845s] copying resource/vacuum_slam -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index/resource_index/packages
+[6.846s] copying package.xml -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam
+[6.848s] creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/launch
+[6.850s] copying launch/online_async_launch.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/launch
+[6.852s] creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/config
+[6.855s] copying config/mapper_params_online_async.yaml -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/config
+[6.858s] running install_egg_info
+[6.883s] Copying ../../build/vacuum_slam/vacuum_slam.egg-info to /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam-0.0.0-py3.10.egg-info
+[6.911s] running install_scripts
+[7.102s] writing list of installed files to '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log'
+[7.278s] Invoked command in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam' returned '0': PYTHONPATH=/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vacuum_slam build --build-base /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build install --record /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log --single-version-externally-managed install_data

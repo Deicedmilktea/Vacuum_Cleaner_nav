@@ -1,0 +1,91 @@
+[0.095s] Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake /home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2 -DCMAKE_INSTALL_PREFIX=/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2
+[1.776s] -- The C compiler identification is GNU 11.4.0
+[1.777s] -- The CXX compiler identification is GNU 11.4.0
+[1.778s] -- Detecting C compiler ABI info
+[1.778s] -- Detecting C compiler ABI info - done
+[1.779s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.779s] -- Detecting C compile features
+[1.780s] -- Detecting C compile features - done
+[1.785s] -- Detecting CXX compiler ABI info
+[1.786s] -- Detecting CXX compiler ABI info - done
+[1.792s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.792s] -- Detecting CXX compile features
+[1.793s] -- Detecting CXX compile features - done
+[1.793s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.452s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[3.052s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[3.461s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.561s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.638s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.731s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.852s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.191s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[4.216s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[4.828s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[5.137s] -- Found FastRTPS: /opt/ros/humble/include  
+[5.584s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.670s] -- Looking for pthread.h
+[6.153s] -- Looking for pthread.h - found
+[6.157s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[6.628s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[6.634s] -- Found Threads: TRUE  
+[7.089s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[7.355s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[7.839s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.861s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.861s] -- Configured cppcheck include dirs: /home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/include;/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/ldlidar_driver/include
+[7.862s] -- Configured cppcheck exclude dirs and/or files: 
+[7.882s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[7.883s] -- Configured cpplint exclude dirs and/or files: 
+[7.887s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.894s] -- Added test 'lint_cmake' to check CMake code style
+[7.899s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[7.920s] -- Added test 'uncrustify' to check C / C++ code style
+[7.920s] -- Configured uncrustify additional arguments: 
+[7.925s] -- Added test 'xmllint' to check XML markup files
+[7.933s] -- Configuring done
+[7.995s] -- Generating done
+[8.011s] -- Build files have been written to: /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2
+[8.049s] Invoked command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake /home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2 -DCMAKE_INSTALL_PREFIX=/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2
+[8.061s] Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake --build /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2 -- -j4 -l4
+[8.276s] [ 12%] [32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/src/demo.cpp.o[0m
+[8.289s] [ 25%] [32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/ldlidar_driver.cpp.o[0m
+[8.298s] [ 37%] [32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/lipkg.cpp.o[0m
+[8.320s] [ 50%] [32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/log_module.cpp.o[0m
+[10.124s] [ 62%] [32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/serial_interface_linux.cpp.o[0m
+[13.365s] [ 75%] [32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/sl_transform.cpp.o[0m
+[13.708s] [ 87%] [32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/slbf.cpp.o[0m
+[30.678s] [100%] [32m[1mLinking CXX executable ldlidar_sl_ros2_node[0m
+[31.868s] [100%] Built target ldlidar_sl_ros2_node
+[31.907s] Invoked command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake --build /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2 -- -j4 -l4
+[31.948s] Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake --install /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2
+[31.974s] -- Install configuration: ""
+[31.975s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib/ldlidar_sl_ros2/ldlidar_sl_ros2_node
+[31.987s] -- Set runtime path of "/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib/ldlidar_sl_ros2/ldlidar_sl_ros2_node" to ""
+[31.988s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch
+[31.988s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch/ld14p.launch.py
+[31.989s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch/ld14.launch.py
+[31.990s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch/viewer_ld14.launch.py
+[31.991s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch/viewer_ld14p.launch.py
+[31.992s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//rviz2
+[31.993s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//rviz2/ldlidar.rviz
+[31.993s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//scripts
+[31.994s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//scripts/ldlidar.rules
+[31.995s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//scripts/create_udev_rules.sh
+[31.996s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//scripts/delete_udev_rules.sh
+[31.998s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ament_index/resource_index/package_run_dependencies/ldlidar_sl_ros2
+[31.999s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ament_index/resource_index/parent_prefix_path/ldlidar_sl_ros2
+[32.001s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/environment/ament_prefix_path.sh
+[32.002s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/environment/ament_prefix_path.dsv
+[32.003s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/environment/path.sh
+[32.004s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/environment/path.dsv
+[32.006s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/local_setup.bash
+[32.007s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/local_setup.sh
+[32.008s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/local_setup.zsh
+[32.009s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/local_setup.dsv
+[32.010s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.dsv
+[32.012s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ament_index/resource_index/packages/ldlidar_sl_ros2
+[32.013s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/cmake/ldlidar_sl_ros2Config.cmake
+[32.014s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/cmake/ldlidar_sl_ros2Config-version.cmake
+[32.015s] -- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.xml
+[32.023s] Invoked command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake --install /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2

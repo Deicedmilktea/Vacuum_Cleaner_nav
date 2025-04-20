@@ -1,0 +1,245 @@
+[0.441s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.441s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa0c774c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa0e68850>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa0e68850>>)
+[1.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.234s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/reeve/Vacuum_Cleaner_nav'
+[1.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.284s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.285s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.286s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.286s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.286s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.287s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.287s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.287s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.287s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.288s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.289s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.289s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.289s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.289s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.289s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extensions ['ignore', 'ignore_ament_install']
+[1.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'ignore'
+[1.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'ignore_ament_install'
+[1.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extensions ['colcon_pkg']
+[1.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'colcon_pkg'
+[1.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extensions ['colcon_meta']
+[1.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'colcon_meta'
+[1.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extensions ['ros']
+[1.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'ros'
+[1.300s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ldlidar_sl_ros2' with type 'ros.ament_cmake' and name 'ldlidar_sl_ros2'
+[1.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extensions ['ignore', 'ignore_ament_install']
+[1.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'ignore'
+[1.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'ignore_ament_install'
+[1.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extensions ['colcon_pkg']
+[1.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'colcon_pkg'
+[1.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extensions ['colcon_meta']
+[1.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'colcon_meta'
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extensions ['ros']
+[1.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'ros'
+[1.307s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vacuum_odom' with type 'ros.ament_python' and name 'vacuum_odom'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extensions ['ignore', 'ignore_ament_install']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'ignore'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'ignore_ament_install'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extensions ['colcon_pkg']
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'colcon_pkg'
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extensions ['colcon_meta']
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'colcon_meta'
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extensions ['ros']
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'ros'
+[1.313s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vacuum_slam' with type 'ros.ament_python' and name 'vacuum_slam'
+[1.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.434s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.434s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.438s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[1.438s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.440s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.444s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/reeve/Vacuum_Cleaner_nav/install
+[1.454s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 276 installed packages in /opt/ros/humble
+[1.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.627s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'cmake_args' from command line to 'None'
+[1.628s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'cmake_target' from command line to 'None'
+[1.628s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.628s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[1.628s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[1.628s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[1.628s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[1.628s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[1.628s] Level 5:colcon.colcon_core.verb:set package 'ldlidar_sl_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.629s] DEBUG:colcon.colcon_core.verb:Building package 'ldlidar_sl_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2', 'merge_install': False, 'path': '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2', 'symlink_install': False, 'test_result_base': None}
+[1.630s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'cmake_args' from command line to 'None'
+[1.630s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'cmake_target' from command line to 'None'
+[1.631s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.631s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'cmake_clean_cache' from command line to 'False'
+[1.631s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'cmake_clean_first' from command line to 'False'
+[1.631s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'cmake_force_configure' from command line to 'False'
+[1.631s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'ament_cmake_args' from command line to 'None'
+[1.631s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'catkin_cmake_args' from command line to 'None'
+[1.631s] Level 5:colcon.colcon_core.verb:set package 'vacuum_odom' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.631s] DEBUG:colcon.colcon_core.verb:Building package 'vacuum_odom' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom', 'merge_install': False, 'path': '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_odom', 'symlink_install': False, 'test_result_base': None}
+[1.633s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'cmake_args' from command line to 'None'
+[1.633s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'cmake_target' from command line to 'None'
+[1.633s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.633s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'cmake_clean_cache' from command line to 'False'
+[1.633s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'cmake_clean_first' from command line to 'False'
+[1.633s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'cmake_force_configure' from command line to 'False'
+[1.633s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'ament_cmake_args' from command line to 'None'
+[1.634s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'catkin_cmake_args' from command line to 'None'
+[1.634s] Level 5:colcon.colcon_core.verb:set package 'vacuum_slam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.634s] DEBUG:colcon.colcon_core.verb:Building package 'vacuum_slam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam', 'merge_install': False, 'path': '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam', 'symlink_install': False, 'test_result_base': None}
+[1.634s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.638s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.639s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2' with build type 'ament_cmake'
+[1.640s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2'
+[1.649s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.650s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.650s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.669s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_odom' with build type 'ament_python'
+[1.670s] Level 1:colcon.colcon_core.shell:create_environment_hook('vacuum_odom', 'ament_prefix_path')
+[1.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/hook/ament_prefix_path.ps1'
+[1.675s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/hook/ament_prefix_path.dsv'
+[1.678s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/hook/ament_prefix_path.sh'
+[1.682s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.683s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.700s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam' with build type 'ament_python'
+[1.700s] Level 1:colcon.colcon_core.shell:create_environment_hook('vacuum_slam', 'ament_prefix_path')
+[1.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/hook/ament_prefix_path.ps1'
+[1.704s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/hook/ament_prefix_path.dsv'
+[1.707s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/hook/ament_prefix_path.sh'
+[1.710s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.710s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake --build /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2 -- -j4 -l4
+[3.014s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_odom'
+[3.015s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.016s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.227s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam'
+[4.228s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.228s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.249s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake --build /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2 -- -j4 -l4
+[4.290s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake --install /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2
+[4.348s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ldlidar_sl_ros2)
+[4.375s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble /usr/bin/cmake --install /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2
+[4.382s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2' for CMake module files
+[4.386s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2' for CMake config files
+[4.390s] Level 1:colcon.colcon_core.shell:create_environment_hook('ldlidar_sl_ros2', 'cmake_prefix_path')
+[4.391s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/hook/cmake_prefix_path.ps1'
+[4.394s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/hook/cmake_prefix_path.dsv'
+[4.397s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/hook/cmake_prefix_path.sh'
+[4.400s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib'
+[4.402s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/bin'
+[4.402s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib/pkgconfig/ldlidar_sl_ros2.pc'
+[4.403s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib/python3.10/site-packages'
+[4.405s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/bin'
+[4.406s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.ps1'
+[4.411s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.dsv'
+[4.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.sh'
+[4.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.bash'
+[4.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.zsh'
+[4.426s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/colcon-core/packages/ldlidar_sl_ros2)
+[4.430s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ldlidar_sl_ros2)
+[4.431s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2' for CMake module files
+[4.434s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2' for CMake config files
+[4.437s] Level 1:colcon.colcon_core.shell:create_environment_hook('ldlidar_sl_ros2', 'cmake_prefix_path')
+[4.438s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/hook/cmake_prefix_path.ps1'
+[4.441s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/hook/cmake_prefix_path.dsv'
+[4.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/hook/cmake_prefix_path.sh'
+[4.447s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib'
+[4.448s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/bin'
+[4.448s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib/pkgconfig/ldlidar_sl_ros2.pc'
+[4.450s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib/python3.10/site-packages'
+[4.451s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/bin'
+[4.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.ps1'
+[4.457s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.dsv'
+[4.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.sh'
+[4.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.bash'
+[4.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.zsh'
+[4.470s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/colcon-core/packages/ldlidar_sl_ros2)
+[6.082s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_odom': PYTHONPATH=/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vacuum_odom build --build-base /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build install --record /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/install.log --single-version-externally-managed install_data
+[6.114s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam': PYTHONPATH=/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vacuum_slam build --build-base /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build install --record /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log --single-version-externally-managed install_data
+[7.732s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom' for CMake module files
+[7.736s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom' for CMake config files
+[7.741s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_odom' returned '0': PYTHONPATH=/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vacuum_odom build --build-base /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build install --record /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/install.log --single-version-externally-managed install_data
+[7.743s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib'
+[7.744s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/bin'
+[7.744s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/pkgconfig/vacuum_odom.pc'
+[7.745s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages'
+[7.746s] Level 1:colcon.colcon_core.shell:create_environment_hook('vacuum_odom', 'pythonpath')
+[7.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/hook/pythonpath.ps1'
+[7.749s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/hook/pythonpath.dsv'
+[7.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/hook/pythonpath.sh'
+[7.755s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/bin'
+[7.756s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vacuum_odom)
+[7.758s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/package.ps1'
+[7.762s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/package.dsv'
+[7.765s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/package.sh'
+[7.769s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/package.bash'
+[7.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/package.zsh'
+[7.774s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/colcon-core/packages/vacuum_odom)
+[7.782s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam' for CMake module files
+[7.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam' returned '0': PYTHONPATH=/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vacuum_slam build --build-base /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build install --record /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log --single-version-externally-managed install_data
+[7.787s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam' for CMake config files
+[7.792s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib'
+[7.793s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/bin'
+[7.794s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/pkgconfig/vacuum_slam.pc'
+[7.796s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages'
+[7.796s] Level 1:colcon.colcon_core.shell:create_environment_hook('vacuum_slam', 'pythonpath')
+[7.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/hook/pythonpath.ps1'
+[7.801s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/hook/pythonpath.dsv'
+[7.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/hook/pythonpath.sh'
+[7.808s] Level 1:colcon.colcon_core.environment:checking '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/bin'
+[7.809s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vacuum_slam)
+[7.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/package.ps1'
+[7.814s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/package.dsv'
+[7.818s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/package.sh'
+[7.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/package.bash'
+[7.824s] INFO:colcon.colcon_core.shell:Creating package script '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/package.zsh'
+[7.827s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/colcon-core/packages/vacuum_slam)
+[7.829s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.831s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.832s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[7.834s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.865s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.865s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.866s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.871s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[7.871s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.872s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/reeve/Vacuum_Cleaner_nav/install/local_setup.ps1'
+[7.877s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/reeve/Vacuum_Cleaner_nav/install/_local_setup_util_ps1.py'
+[7.884s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/reeve/Vacuum_Cleaner_nav/install/setup.ps1'
+[7.889s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/reeve/Vacuum_Cleaner_nav/install/local_setup.sh'
+[7.891s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/reeve/Vacuum_Cleaner_nav/install/_local_setup_util_sh.py'
+[7.894s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/reeve/Vacuum_Cleaner_nav/install/setup.sh'
+[7.899s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/reeve/Vacuum_Cleaner_nav/install/local_setup.bash'
+[7.902s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/reeve/Vacuum_Cleaner_nav/install/setup.bash'
+[7.907s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/reeve/Vacuum_Cleaner_nav/install/local_setup.zsh'
+[7.909s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/reeve/Vacuum_Cleaner_nav/install/setup.zsh'

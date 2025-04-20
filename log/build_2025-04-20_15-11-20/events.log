@@ -1,0 +1,498 @@
+[0.000000] (-) TimerEvent: {}
+[0.002022] (ldlidar_sl_ros2) JobQueued: {'identifier': 'ldlidar_sl_ros2', 'dependencies': OrderedDict()}
+[0.002251] (vacuum_odom) JobQueued: {'identifier': 'vacuum_odom', 'dependencies': OrderedDict()}
+[0.002530] (vacuum_slam) JobQueued: {'identifier': 'vacuum_slam', 'dependencies': OrderedDict()}
+[0.002686] (ldlidar_sl_ros2) JobStarted: {'identifier': 'ldlidar_sl_ros2'}
+[0.029380] (vacuum_odom) JobStarted: {'identifier': 'vacuum_odom'}
+[0.057609] (vacuum_slam) JobStarted: {'identifier': 'vacuum_slam'}
+[0.090114] (ldlidar_sl_ros2) JobProgress: {'identifier': 'ldlidar_sl_ros2', 'progress': 'cmake'}
+[0.092849] (ldlidar_sl_ros2) Command: {'cmd': ['/usr/bin/cmake', '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2', '-DCMAKE_INSTALL_PREFIX=/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2'], 'cwd': '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2', 'env': OrderedDict([('LANGUAGE', 'en_US:en'), ('USER', 'reeve'), ('SSH_CLIENT', '192.168.1.102 57576 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/reeve'), ('OLDPWD', '/home/reeve/Vacuum_Cleaner_nav/src'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-70834542-3a5c-46e1-95ed-904c069f423a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/install:/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'reeve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/reeve/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-9affdbd9e1.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2'), ('SSH_CONNECTION', '192.168.1.102 57576 192.168.1.103 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble')]), 'shell': False}
+[0.098580] (-) TimerEvent: {}
+[0.206222] (-) TimerEvent: {}
+[0.307104] (-) TimerEvent: {}
+[0.408194] (-) TimerEvent: {}
+[0.509086] (-) TimerEvent: {}
+[0.609916] (-) TimerEvent: {}
+[0.711828] (-) TimerEvent: {}
+[0.812693] (-) TimerEvent: {}
+[0.913662] (-) TimerEvent: {}
+[1.014534] (-) TimerEvent: {}
+[1.115348] (-) TimerEvent: {}
+[1.216218] (-) TimerEvent: {}
+[1.317206] (-) TimerEvent: {}
+[1.418036] (-) TimerEvent: {}
+[1.519870] (-) TimerEvent: {}
+[1.620773] (-) TimerEvent: {}
+[1.721521] (-) TimerEvent: {}
+[1.775624] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.779292] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.780004] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.780643] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.781164] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.781748] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.782360] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.782883] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.787988] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.794132] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.794669] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.795070] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.795541] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.821687] (-) TimerEvent: {}
+[1.922843] (-) TimerEvent: {}
+[2.023663] (-) TimerEvent: {}
+[2.124433] (-) TimerEvent: {}
+[2.225237] (-) TimerEvent: {}
+[2.326039] (-) TimerEvent: {}
+[2.426879] (-) TimerEvent: {}
+[2.454538] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.527373] (-) TimerEvent: {}
+[2.628548] (-) TimerEvent: {}
+[2.729432] (-) TimerEvent: {}
+[2.830568] (-) TimerEvent: {}
+[2.931309] (-) TimerEvent: {}
+[3.032135] (-) TimerEvent: {}
+[3.053844] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[3.132387] (-) TimerEvent: {}
+[3.233598] (-) TimerEvent: {}
+[3.334341] (-) TimerEvent: {}
+[3.435164] (-) TimerEvent: {}
+[3.462831] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[3.535361] (-) TimerEvent: {}
+[3.562522] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.635535] (-) TimerEvent: {}
+[3.640575] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[3.733023] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.735693] (-) TimerEvent: {}
+[3.836489] (-) TimerEvent: {}
+[3.854412] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.936694] (-) TimerEvent: {}
+[4.037508] (-) TimerEvent: {}
+[4.138336] (-) TimerEvent: {}
+[4.193196] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[4.218477] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.238503] (-) TimerEvent: {}
+[4.339384] (-) TimerEvent: {}
+[4.440165] (-) TimerEvent: {}
+[4.541188] (-) TimerEvent: {}
+[4.641991] (-) TimerEvent: {}
+[4.744176] (-) TimerEvent: {}
+[4.830027] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[4.844348] (-) TimerEvent: {}
+[4.945653] (-) TimerEvent: {}
+[5.047339] (vacuum_odom) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/vacuum_odom', 'build', '--build-base', '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build', 'install', '--record', '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_odom', 'env': {'LANGUAGE': 'en_US:en', 'USER': 'reeve', 'SSH_CLIENT': '192.168.1.102 57576 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/reeve', 'OLDPWD': '/home/reeve/Vacuum_Cleaner_nav/src', 'TERM_PROGRAM_VERSION': '1.99.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-70834542-3a5c-46e1-95ed-904c069f423a.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/reeve/Vacuum_Cleaner_nav/install:/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'reeve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/reeve/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9affdbd9e1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom', 'SSH_CONNECTION': '192.168.1.102 57576 192.168.1.103 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2'}, 'shell': False}
+[5.055271] (-) TimerEvent: {}
+[5.138699] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.155483] (-) TimerEvent: {}
+[5.228373] (vacuum_slam) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/vacuum_slam', 'build', '--build-base', '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build', 'install', '--record', '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam', 'env': {'LANGUAGE': 'en_US:en', 'USER': 'reeve', 'SSH_CLIENT': '192.168.1.102 57576 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/reeve', 'OLDPWD': '/home/reeve/Vacuum_Cleaner_nav/src', 'TERM_PROGRAM_VERSION': '1.99.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-70834542-3a5c-46e1-95ed-904c069f423a.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/reeve/Vacuum_Cleaner_nav/install:/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'reeve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/reeve/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9affdbd9e1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam', 'SSH_CONNECTION': '192.168.1.102 57576 192.168.1.103 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2'}, 'shell': False}
+[5.255652] (-) TimerEvent: {}
+[5.357506] (-) TimerEvent: {}
+[5.459298] (-) TimerEvent: {}
+[5.560844] (-) TimerEvent: {}
+[5.586292] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.661026] (-) TimerEvent: {}
+[5.671876] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[5.761285] (-) TimerEvent: {}
+[5.862699] (-) TimerEvent: {}
+[5.963581] (-) TimerEvent: {}
+[6.064696] (-) TimerEvent: {}
+[6.155328] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[6.158722] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[6.168637] (-) TimerEvent: {}
+[6.269514] (-) TimerEvent: {}
+[6.370471] (-) TimerEvent: {}
+[6.471540] (-) TimerEvent: {}
+[6.572705] (-) TimerEvent: {}
+[6.630647] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[6.636563] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[6.672860] (-) TimerEvent: {}
+[6.723793] (vacuum_odom) StdoutLine: {'line': b'running egg_info\n'}
+[6.727419] (vacuum_odom) StdoutLine: {'line': b'creating ../../build/vacuum_odom/vacuum_odom.egg-info\n'}
+[6.728633] (vacuum_odom) StdoutLine: {'line': b'writing ../../build/vacuum_odom/vacuum_odom.egg-info/PKG-INFO\n'}
+[6.732633] (vacuum_odom) StdoutLine: {'line': b'writing dependency_links to ../../build/vacuum_odom/vacuum_odom.egg-info/dependency_links.txt\n'}
+[6.734167] (vacuum_odom) StdoutLine: {'line': b'writing entry points to ../../build/vacuum_odom/vacuum_odom.egg-info/entry_points.txt\n'}
+[6.734759] (vacuum_odom) StdoutLine: {'line': b'writing requirements to ../../build/vacuum_odom/vacuum_odom.egg-info/requires.txt\n'}
+[6.735360] (vacuum_odom) StdoutLine: {'line': b'writing top-level names to ../../build/vacuum_odom/vacuum_odom.egg-info/top_level.txt\n'}
+[6.735918] (vacuum_odom) StdoutLine: {'line': b"writing manifest file '../../build/vacuum_odom/vacuum_odom.egg-info/SOURCES.txt'\n"}
+[6.741691] (vacuum_odom) StdoutLine: {'line': b"reading manifest file '../../build/vacuum_odom/vacuum_odom.egg-info/SOURCES.txt'\n"}
+[6.747114] (vacuum_odom) StdoutLine: {'line': b"writing manifest file '../../build/vacuum_odom/vacuum_odom.egg-info/SOURCES.txt'\n"}
+[6.749001] (vacuum_odom) StdoutLine: {'line': b'running build\n'}
+[6.751589] (vacuum_odom) StdoutLine: {'line': b'running build_py\n'}
+[6.752177] (vacuum_odom) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build\n'}
+[6.752824] (vacuum_odom) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib\n'}
+[6.753698] (vacuum_odom) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom\n'}
+[6.754307] (vacuum_odom) StdoutLine: {'line': b'copying vacuum_odom/__init__.py -> /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom\n'}
+[6.754912] (vacuum_odom) StdoutLine: {'line': b'copying vacuum_odom/odom_publisher_node.py -> /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom\n'}
+[6.755553] (vacuum_odom) StdoutLine: {'line': b'running install\n'}
+[6.756083] (vacuum_odom) StdoutLine: {'line': b'running install_lib\n'}
+[6.756857] (vacuum_odom) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom\n'}
+[6.757794] (vacuum_odom) StdoutLine: {'line': b'copying /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom/__init__.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom\n'}
+[6.758688] (vacuum_odom) StdoutLine: {'line': b'copying /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom/odom_publisher_node.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom\n'}
+[6.761693] (vacuum_odom) StdoutLine: {'line': b'byte-compiling /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom/__init__.py to __init__.cpython-310.pyc\n'}
+[6.763416] (vacuum_odom) StdoutLine: {'line': b'byte-compiling /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom/odom_publisher_node.py to odom_publisher_node.cpython-310.pyc\n'}
+[6.775635] (vacuum_odom) StdoutLine: {'line': b'running install_data\n'}
+[6.776366] (-) TimerEvent: {}
+[6.785880] (vacuum_odom) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/ament_index\n'}
+[6.786777] (vacuum_odom) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/ament_index/resource_index\n'}
+[6.787527] (vacuum_odom) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/ament_index/resource_index/packages\n'}
+[6.788166] (vacuum_odom) StdoutLine: {'line': b'copying resource/vacuum_odom -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/ament_index/resource_index/packages\n'}
+[6.788817] (vacuum_odom) StdoutLine: {'line': b'copying package.xml -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom\n'}
+[6.789503] (vacuum_odom) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/launch\n'}
+[6.797591] (vacuum_odom) StdoutLine: {'line': b'copying launch/odom_publisher.launch.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/launch\n'}
+[6.801146] (vacuum_odom) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.801946] (vacuum_odom) StdoutLine: {'line': b'Copying ../../build/vacuum_odom/vacuum_odom.egg-info to /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom-0.0.0-py3.10.egg-info\n'}
+[6.802658] (vacuum_odom) StdoutLine: {'line': b'running install_scripts\n'}
+[6.853281] (vacuum_slam) StdoutLine: {'line': b'running egg_info\n'}
+[6.858565] (vacuum_slam) StdoutLine: {'line': b'creating ../../build/vacuum_slam/vacuum_slam.egg-info\n'}
+[6.860709] (vacuum_slam) StdoutLine: {'line': b'writing ../../build/vacuum_slam/vacuum_slam.egg-info/PKG-INFO\n'}
+[6.863012] (vacuum_slam) StdoutLine: {'line': b'writing dependency_links to ../../build/vacuum_slam/vacuum_slam.egg-info/dependency_links.txt\n'}
+[6.865588] (vacuum_slam) StdoutLine: {'line': b'writing entry points to ../../build/vacuum_slam/vacuum_slam.egg-info/entry_points.txt\n'}
+[6.870430] (vacuum_slam) StdoutLine: {'line': b'writing requirements to ../../build/vacuum_slam/vacuum_slam.egg-info/requires.txt\n'}
+[6.871051] (vacuum_slam) StdoutLine: {'line': b'writing top-level names to ../../build/vacuum_slam/vacuum_slam.egg-info/top_level.txt\n'}
+[6.871676] (vacuum_slam) StdoutLine: {'line': b"writing manifest file '../../build/vacuum_slam/vacuum_slam.egg-info/SOURCES.txt'\n"}
+[6.875498] (vacuum_slam) StdoutLine: {'line': b"reading manifest file '../../build/vacuum_slam/vacuum_slam.egg-info/SOURCES.txt'\n"}
+[6.876528] (-) TimerEvent: {}
+[6.885149] (vacuum_slam) StdoutLine: {'line': b"writing manifest file '../../build/vacuum_slam/vacuum_slam.egg-info/SOURCES.txt'\n"}
+[6.886777] (vacuum_slam) StdoutLine: {'line': b'running build\n'}
+[6.887450] (vacuum_slam) StdoutLine: {'line': b'running build_py\n'}
+[6.888413] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build\n'}
+[6.888929] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build/lib\n'}
+[6.889465] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build/lib/vacuum_slam\n'}
+[6.889986] (vacuum_slam) StdoutLine: {'line': b'copying vacuum_slam/__init__.py -> /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build/lib/vacuum_slam\n'}
+[6.890580] (vacuum_slam) StdoutLine: {'line': b'running install\n'}
+[6.891161] (vacuum_slam) StdoutLine: {'line': b'running install_lib\n'}
+[6.892700] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam\n'}
+[6.894378] (vacuum_slam) StdoutLine: {'line': b'copying /home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build/lib/vacuum_slam/__init__.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam\n'}
+[6.895980] (vacuum_slam) StdoutLine: {'line': b'byte-compiling /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam/__init__.py to __init__.cpython-310.pyc\n'}
+[6.898585] (vacuum_slam) StdoutLine: {'line': b'running install_data\n'}
+[6.899709] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index\n'}
+[6.900586] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index/resource_index\n'}
+[6.901765] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index/resource_index/packages\n'}
+[6.902628] (vacuum_slam) StdoutLine: {'line': b'copying resource/vacuum_slam -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index/resource_index/packages\n'}
+[6.903689] (vacuum_slam) StdoutLine: {'line': b'copying package.xml -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam\n'}
+[6.904500] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/launch\n'}
+[6.906483] (vacuum_slam) StdoutLine: {'line': b'copying launch/online_async_launch.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/launch\n'}
+[6.908864] (vacuum_slam) StdoutLine: {'line': b'creating /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/config\n'}
+[6.910391] (vacuum_slam) StdoutLine: {'line': b'copying config/mapper_params_online_async.yaml -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/config\n'}
+[6.914069] (vacuum_slam) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.916698] (vacuum_odom) StdoutLine: {'line': b'Installing odom_publisher_node script to /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/vacuum_odom\n'}
+[6.920456] (vacuum_odom) StdoutLine: {'line': b"writing list of installed files to '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/install.log'\n"}
+[6.940546] (vacuum_slam) StdoutLine: {'line': b'Copying ../../build/vacuum_slam/vacuum_slam.egg-info to /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam-0.0.0-py3.10.egg-info\n'}
+[6.968409] (vacuum_slam) StdoutLine: {'line': b'running install_scripts\n'}
+[6.977558] (-) TimerEvent: {}
+[7.080117] (-) TimerEvent: {}
+[7.088739] (vacuum_odom) CommandEnded: {'returncode': 0}
+[7.091562] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[7.154757] (vacuum_odom) JobEnded: {'identifier': 'vacuum_odom', 'rc': 0}
+[7.158831] (vacuum_slam) StdoutLine: {'line': b"writing list of installed files to '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log'\n"}
+[7.180435] (-) TimerEvent: {}
+[7.283885] (-) TimerEvent: {}
+[7.335335] (vacuum_slam) CommandEnded: {'returncode': 0}
+[7.357526] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[7.378261] (vacuum_slam) JobEnded: {'identifier': 'vacuum_slam', 'rc': 0}
+[7.383991] (-) TimerEvent: {}
+[7.484629] (-) TimerEvent: {}
+[7.585298] (-) TimerEvent: {}
+[7.685970] (-) TimerEvent: {}
+[7.786646] (-) TimerEvent: {}
+[7.841610] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[7.862962] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[7.863860] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/include;/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/ldlidar_driver/include\n'}
+[7.864271] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[7.884625] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[7.885169] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[7.886789] (-) TimerEvent: {}
+[7.889682] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[7.896802] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[7.901568] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[7.922389] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[7.922922] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[7.927359] (ldlidar_sl_ros2) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[7.935616] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.987196] (-) TimerEvent: {}
+[7.997127] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Generating done\n'}
+[8.013659] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Build files have been written to: /home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2\n'}
+[8.051535] (ldlidar_sl_ros2) CommandEnded: {'returncode': 0}
+[8.053380] (ldlidar_sl_ros2) JobProgress: {'identifier': 'ldlidar_sl_ros2', 'progress': 'build'}
+[8.056606] (ldlidar_sl_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2', '--', '-j4', '-l4'], 'cwd': '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2', 'env': OrderedDict([('LANGUAGE', 'en_US:en'), ('USER', 'reeve'), ('SSH_CLIENT', '192.168.1.102 57576 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/reeve'), ('OLDPWD', '/home/reeve/Vacuum_Cleaner_nav/src'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-70834542-3a5c-46e1-95ed-904c069f423a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/install:/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'reeve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/reeve/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-9affdbd9e1.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2'), ('SSH_CONNECTION', '192.168.1.102 57576 192.168.1.103 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble')]), 'shell': False}
+[8.087298] (-) TimerEvent: {}
+[8.188053] (-) TimerEvent: {}
+[8.277804] (ldlidar_sl_ros2) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/src/demo.cpp.o\x1b[0m\n'}
+[8.288447] (-) TimerEvent: {}
+[8.289496] (ldlidar_sl_ros2) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/ldlidar_driver.cpp.o\x1b[0m\n'}
+[8.300461] (ldlidar_sl_ros2) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/lipkg.cpp.o\x1b[0m\n'}
+[8.321621] (ldlidar_sl_ros2) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/log_module.cpp.o\x1b[0m\n'}
+[8.388650] (-) TimerEvent: {}
+[8.490000] (-) TimerEvent: {}
+[8.591454] (-) TimerEvent: {}
+[8.692726] (-) TimerEvent: {}
+[8.794063] (-) TimerEvent: {}
+[8.895396] (-) TimerEvent: {}
+[8.996766] (-) TimerEvent: {}
+[9.098269] (-) TimerEvent: {}
+[9.200350] (-) TimerEvent: {}
+[9.301933] (-) TimerEvent: {}
+[9.403549] (-) TimerEvent: {}
+[9.505558] (-) TimerEvent: {}
+[9.607278] (-) TimerEvent: {}
+[9.709395] (-) TimerEvent: {}
+[9.811443] (-) TimerEvent: {}
+[9.914225] (-) TimerEvent: {}
+[10.015260] (-) TimerEvent: {}
+[10.116161] (-) TimerEvent: {}
+[10.126188] (ldlidar_sl_ros2) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/serial_interface_linux.cpp.o\x1b[0m\n'}
+[10.216396] (-) TimerEvent: {}
+[10.317380] (-) TimerEvent: {}
+[10.418384] (-) TimerEvent: {}
+[10.519339] (-) TimerEvent: {}
+[10.620401] (-) TimerEvent: {}
+[10.721490] (-) TimerEvent: {}
+[10.823724] (-) TimerEvent: {}
+[10.925889] (-) TimerEvent: {}
+[11.026904] (-) TimerEvent: {}
+[11.129259] (-) TimerEvent: {}
+[11.246333] (-) TimerEvent: {}
+[11.347630] (-) TimerEvent: {}
+[11.448679] (-) TimerEvent: {}
+[11.549813] (-) TimerEvent: {}
+[11.650960] (-) TimerEvent: {}
+[11.752183] (-) TimerEvent: {}
+[11.853224] (-) TimerEvent: {}
+[11.954342] (-) TimerEvent: {}
+[12.055482] (-) TimerEvent: {}
+[12.156587] (-) TimerEvent: {}
+[12.258253] (-) TimerEvent: {}
+[12.360120] (-) TimerEvent: {}
+[12.461242] (-) TimerEvent: {}
+[12.562419] (-) TimerEvent: {}
+[12.663619] (-) TimerEvent: {}
+[12.764868] (-) TimerEvent: {}
+[12.866066] (-) TimerEvent: {}
+[12.967328] (-) TimerEvent: {}
+[13.068656] (-) TimerEvent: {}
+[13.169662] (-) TimerEvent: {}
+[13.270727] (-) TimerEvent: {}
+[13.366828] (ldlidar_sl_ros2) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/sl_transform.cpp.o\x1b[0m\n'}
+[13.370967] (-) TimerEvent: {}
+[13.472131] (-) TimerEvent: {}
+[13.573234] (-) TimerEvent: {}
+[13.674300] (-) TimerEvent: {}
+[13.710519] (ldlidar_sl_ros2) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/ldlidar_sl_ros2_node.dir/ldlidar_driver/src/slbf.cpp.o\x1b[0m\n'}
+[13.774560] (-) TimerEvent: {}
+[13.875593] (-) TimerEvent: {}
+[13.976626] (-) TimerEvent: {}
+[14.077550] (-) TimerEvent: {}
+[14.178612] (-) TimerEvent: {}
+[14.279784] (-) TimerEvent: {}
+[14.380882] (-) TimerEvent: {}
+[14.481869] (-) TimerEvent: {}
+[14.582908] (-) TimerEvent: {}
+[14.683784] (-) TimerEvent: {}
+[14.784745] (-) TimerEvent: {}
+[14.885706] (-) TimerEvent: {}
+[14.986775] (-) TimerEvent: {}
+[15.088669] (-) TimerEvent: {}
+[15.190769] (-) TimerEvent: {}
+[15.292853] (-) TimerEvent: {}
+[15.394989] (-) TimerEvent: {}
+[15.497090] (-) TimerEvent: {}
+[15.598766] (-) TimerEvent: {}
+[15.701005] (-) TimerEvent: {}
+[15.803036] (-) TimerEvent: {}
+[15.905255] (-) TimerEvent: {}
+[16.011439] (-) TimerEvent: {}
+[16.112564] (-) TimerEvent: {}
+[16.213737] (-) TimerEvent: {}
+[16.314617] (-) TimerEvent: {}
+[16.417057] (-) TimerEvent: {}
+[16.518761] (-) TimerEvent: {}
+[16.620902] (-) TimerEvent: {}
+[16.722537] (-) TimerEvent: {}
+[16.824299] (-) TimerEvent: {}
+[16.926235] (-) TimerEvent: {}
+[17.027552] (-) TimerEvent: {}
+[17.128439] (-) TimerEvent: {}
+[17.229465] (-) TimerEvent: {}
+[17.330376] (-) TimerEvent: {}
+[17.431270] (-) TimerEvent: {}
+[17.532137] (-) TimerEvent: {}
+[17.633022] (-) TimerEvent: {}
+[17.733942] (-) TimerEvent: {}
+[17.834755] (-) TimerEvent: {}
+[17.935587] (-) TimerEvent: {}
+[18.036344] (-) TimerEvent: {}
+[18.137094] (-) TimerEvent: {}
+[18.237902] (-) TimerEvent: {}
+[18.338673] (-) TimerEvent: {}
+[18.439466] (-) TimerEvent: {}
+[18.540234] (-) TimerEvent: {}
+[18.641015] (-) TimerEvent: {}
+[18.741794] (-) TimerEvent: {}
+[18.842592] (-) TimerEvent: {}
+[18.943384] (-) TimerEvent: {}
+[19.044159] (-) TimerEvent: {}
+[19.144953] (-) TimerEvent: {}
+[19.245785] (-) TimerEvent: {}
+[19.346581] (-) TimerEvent: {}
+[19.447507] (-) TimerEvent: {}
+[19.548797] (-) TimerEvent: {}
+[19.649575] (-) TimerEvent: {}
+[19.750369] (-) TimerEvent: {}
+[19.851210] (-) TimerEvent: {}
+[19.952021] (-) TimerEvent: {}
+[20.052863] (-) TimerEvent: {}
+[20.153656] (-) TimerEvent: {}
+[20.254461] (-) TimerEvent: {}
+[20.355257] (-) TimerEvent: {}
+[20.456008] (-) TimerEvent: {}
+[20.556754] (-) TimerEvent: {}
+[20.657529] (-) TimerEvent: {}
+[20.758280] (-) TimerEvent: {}
+[20.859074] (-) TimerEvent: {}
+[20.959887] (-) TimerEvent: {}
+[21.060691] (-) TimerEvent: {}
+[21.161549] (-) TimerEvent: {}
+[21.262400] (-) TimerEvent: {}
+[21.363247] (-) TimerEvent: {}
+[21.463997] (-) TimerEvent: {}
+[21.564738] (-) TimerEvent: {}
+[21.665502] (-) TimerEvent: {}
+[21.766292] (-) TimerEvent: {}
+[21.867054] (-) TimerEvent: {}
+[21.967841] (-) TimerEvent: {}
+[22.068584] (-) TimerEvent: {}
+[22.169359] (-) TimerEvent: {}
+[22.270155] (-) TimerEvent: {}
+[22.370929] (-) TimerEvent: {}
+[22.471764] (-) TimerEvent: {}
+[22.572544] (-) TimerEvent: {}
+[22.673336] (-) TimerEvent: {}
+[22.774099] (-) TimerEvent: {}
+[22.874835] (-) TimerEvent: {}
+[22.975633] (-) TimerEvent: {}
+[23.076384] (-) TimerEvent: {}
+[23.177138] (-) TimerEvent: {}
+[23.277900] (-) TimerEvent: {}
+[23.378650] (-) TimerEvent: {}
+[23.479450] (-) TimerEvent: {}
+[23.580190] (-) TimerEvent: {}
+[23.680950] (-) TimerEvent: {}
+[23.781707] (-) TimerEvent: {}
+[23.882457] (-) TimerEvent: {}
+[23.983330] (-) TimerEvent: {}
+[24.084349] (-) TimerEvent: {}
+[24.185072] (-) TimerEvent: {}
+[24.285884] (-) TimerEvent: {}
+[24.386671] (-) TimerEvent: {}
+[24.487521] (-) TimerEvent: {}
+[24.588436] (-) TimerEvent: {}
+[24.689214] (-) TimerEvent: {}
+[24.789992] (-) TimerEvent: {}
+[24.890856] (-) TimerEvent: {}
+[24.991644] (-) TimerEvent: {}
+[25.092431] (-) TimerEvent: {}
+[25.193202] (-) TimerEvent: {}
+[25.294007] (-) TimerEvent: {}
+[25.394872] (-) TimerEvent: {}
+[25.495765] (-) TimerEvent: {}
+[25.596527] (-) TimerEvent: {}
+[25.697281] (-) TimerEvent: {}
+[25.798067] (-) TimerEvent: {}
+[25.898848] (-) TimerEvent: {}
+[25.999669] (-) TimerEvent: {}
+[26.100488] (-) TimerEvent: {}
+[26.201258] (-) TimerEvent: {}
+[26.302044] (-) TimerEvent: {}
+[26.402843] (-) TimerEvent: {}
+[26.503675] (-) TimerEvent: {}
+[26.604404] (-) TimerEvent: {}
+[26.705157] (-) TimerEvent: {}
+[26.805923] (-) TimerEvent: {}
+[26.906733] (-) TimerEvent: {}
+[27.007555] (-) TimerEvent: {}
+[27.108328] (-) TimerEvent: {}
+[27.209187] (-) TimerEvent: {}
+[27.309939] (-) TimerEvent: {}
+[27.410695] (-) TimerEvent: {}
+[27.511481] (-) TimerEvent: {}
+[27.612236] (-) TimerEvent: {}
+[27.712990] (-) TimerEvent: {}
+[27.813736] (-) TimerEvent: {}
+[27.914505] (-) TimerEvent: {}
+[28.015256] (-) TimerEvent: {}
+[28.115992] (-) TimerEvent: {}
+[28.216749] (-) TimerEvent: {}
+[28.317500] (-) TimerEvent: {}
+[28.418236] (-) TimerEvent: {}
+[28.518999] (-) TimerEvent: {}
+[28.619802] (-) TimerEvent: {}
+[28.720546] (-) TimerEvent: {}
+[28.821264] (-) TimerEvent: {}
+[28.921999] (-) TimerEvent: {}
+[29.022733] (-) TimerEvent: {}
+[29.123550] (-) TimerEvent: {}
+[29.224315] (-) TimerEvent: {}
+[29.325061] (-) TimerEvent: {}
+[29.425923] (-) TimerEvent: {}
+[29.527018] (-) TimerEvent: {}
+[29.627852] (-) TimerEvent: {}
+[29.728577] (-) TimerEvent: {}
+[29.829325] (-) TimerEvent: {}
+[29.930049] (-) TimerEvent: {}
+[30.030764] (-) TimerEvent: {}
+[30.131526] (-) TimerEvent: {}
+[30.232240] (-) TimerEvent: {}
+[30.332977] (-) TimerEvent: {}
+[30.433756] (-) TimerEvent: {}
+[30.534617] (-) TimerEvent: {}
+[30.635625] (-) TimerEvent: {}
+[30.680490] (ldlidar_sl_ros2) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ldlidar_sl_ros2_node\x1b[0m\n'}
+[30.735819] (-) TimerEvent: {}
+[30.836539] (-) TimerEvent: {}
+[30.937442] (-) TimerEvent: {}
+[31.038697] (-) TimerEvent: {}
+[31.140230] (-) TimerEvent: {}
+[31.241223] (-) TimerEvent: {}
+[31.342468] (-) TimerEvent: {}
+[31.443513] (-) TimerEvent: {}
+[31.544173] (-) TimerEvent: {}
+[31.644881] (-) TimerEvent: {}
+[31.745669] (-) TimerEvent: {}
+[31.846469] (-) TimerEvent: {}
+[31.870414] (ldlidar_sl_ros2) StdoutLine: {'line': b'[100%] Built target ldlidar_sl_ros2_node\n'}
+[31.909292] (ldlidar_sl_ros2) CommandEnded: {'returncode': 0}
+[31.911762] (ldlidar_sl_ros2) JobProgress: {'identifier': 'ldlidar_sl_ros2', 'progress': 'install'}
+[31.948833] (ldlidar_sl_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2'], 'cwd': '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2', 'env': OrderedDict([('LANGUAGE', 'en_US:en'), ('USER', 'reeve'), ('SSH_CLIENT', '192.168.1.102 57576 22'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/reeve'), ('OLDPWD', '/home/reeve/Vacuum_Cleaner_nav/src'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-70834542-3a5c-46e1-95ed-904c069f423a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/install:/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'reeve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/reeve/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('PAPERSIZE', 'letter'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-9affdbd9e1.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/reeve/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2'), ('SSH_CONNECTION', '192.168.1.102 57576 192.168.1.103 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/reeve/Vacuum_Cleaner_nav/src/ldlidar_sl_ros2/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom:/opt/ros/humble')]), 'shell': False}
+[31.952160] (-) TimerEvent: {}
+[31.976251] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[31.977125] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib/ldlidar_sl_ros2/ldlidar_sl_ros2_node\n'}
+[31.989674] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Set runtime path of "/home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/lib/ldlidar_sl_ros2/ldlidar_sl_ros2_node" to ""\n'}
+[31.990270] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch\n'}
+[31.990795] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch/ld14p.launch.py\n'}
+[31.991715] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch/ld14.launch.py\n'}
+[31.992612] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch/viewer_ld14.launch.py\n'}
+[31.993560] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//launch/viewer_ld14p.launch.py\n'}
+[31.994415] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//rviz2\n'}
+[31.994953] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//rviz2/ldlidar.rviz\n'}
+[31.995934] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//scripts\n'}
+[31.996507] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//scripts/ldlidar.rules\n'}
+[31.997463] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//scripts/create_udev_rules.sh\n'}
+[31.998338] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2//scripts/delete_udev_rules.sh\n'}
+[32.000050] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ament_index/resource_index/package_run_dependencies/ldlidar_sl_ros2\n'}
+[32.001629] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ament_index/resource_index/parent_prefix_path/ldlidar_sl_ros2\n'}
+[32.003124] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/environment/ament_prefix_path.sh\n'}
+[32.004306] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/environment/ament_prefix_path.dsv\n'}
+[32.005482] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/environment/path.sh\n'}
+[32.006764] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/environment/path.dsv\n'}
+[32.007940] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/local_setup.bash\n'}
+[32.009042] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/local_setup.sh\n'}
+[32.010322] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/local_setup.zsh\n'}
+[32.011687] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/local_setup.dsv\n'}
+[32.012772] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.dsv\n'}
+[32.014167] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ament_index/resource_index/packages/ldlidar_sl_ros2\n'}
+[32.015587] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/cmake/ldlidar_sl_ros2Config.cmake\n'}
+[32.016594] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/cmake/ldlidar_sl_ros2Config-version.cmake\n'}
+[32.017727] (ldlidar_sl_ros2) StdoutLine: {'line': b'-- Installing: /home/reeve/Vacuum_Cleaner_nav/install/ldlidar_sl_ros2/share/ldlidar_sl_ros2/package.xml\n'}
+[32.023365] (ldlidar_sl_ros2) CommandEnded: {'returncode': 0}
+[32.052335] (-) TimerEvent: {}
+[32.090146] (ldlidar_sl_ros2) JobEnded: {'identifier': 'ldlidar_sl_ros2', 'rc': 0}
+[32.093178] (-) EventReactorShutdown: {}
