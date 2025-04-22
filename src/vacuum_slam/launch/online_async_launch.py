@@ -13,6 +13,7 @@ def generate_launch_description():
     pkg_ldlidar = get_package_share_directory('ldlidar_sl_ros2')  # 雷达驱动包
     pkg_vacuum_odom = get_package_share_directory('vacuum_odom')  # 里程计包
     pkg_vacuum_slam = get_package_share_directory('vacuum_slam')  # SLAM包
+    pkg_vacuum_bluetooth = get_package_share_directory('vacuum_bluetooth') # 与手机蓝牙通信的包
 
     # 1. 包含雷达启动文件 (根据实际雷达型号选择ld14或ld14p)
     lidar_launch_file = os.path.join(pkg_ldlidar, 'launch', 'ld14.launch.py')
@@ -53,10 +54,20 @@ def generate_launch_description():
         parameters=[{'use_sim_time': False}]  # 与SLAM节点时间设置保持一致
     )
 
+    # 5. Bluetooth Node
+    bluetooth_comm_node = Node(
+        package='vacuum_bluetooth', # The new package name
+        executable='bluetooth_node', # The executable defined in setup.py
+        name='bluetooth_communicator',
+        output='screen'
+        # Add parameters or remappings if needed
+    )
+
     # 返回包含所有节点的启动描述
     return LaunchDescription([
         lidar_launch,      # 雷达节点
         odom_launch,       # 里程计节点  
         slam_toolbox_node,  # SLAM节点
+        bluetooth_comm_node, # Add the bluetooth node
         # rviz_node        # 取消注释以自动启动RViz
     ])
