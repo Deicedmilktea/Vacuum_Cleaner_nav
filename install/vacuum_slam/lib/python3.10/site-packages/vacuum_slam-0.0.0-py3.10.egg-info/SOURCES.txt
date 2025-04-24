@@ -8,6 +8,7 @@ setup.py
 ../../build/vacuum_slam/vacuum_slam.egg-info/requires.txt
 ../../build/vacuum_slam/vacuum_slam.egg-info/top_level.txt
 ../../build/vacuum_slam/vacuum_slam.egg-info/zip-safe
+config/ekf.yaml
 config/mapper_params_online_async.yaml
 launch/online_async_launch.py
 resource/vacuum_slam

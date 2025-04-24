@@ -3,6 +3,7 @@
 /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/ament_index/resource_index/packages/vacuum_slam
 /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/package.xml
 /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/launch/online_async_launch.py
+/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/config/ekf.yaml
 /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/config/mapper_params_online_async.yaml
 /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam-0.0.0-py3.10.egg-info/zip-safe
 /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam-0.0.0-py3.10.egg-info/PKG-INFO

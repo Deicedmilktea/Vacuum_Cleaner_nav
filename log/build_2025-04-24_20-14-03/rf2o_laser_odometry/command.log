@@ -1,0 +1,3 @@
+Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/reeve/Vacuum_Cleaner_nav/src/rf2o_laser_odometry -DCMAKE_INSTALL_PREFIX=/home/reeve/Vacuum_Cleaner_nav/install/rf2o_laser_odometry
+Invoked command in '/home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/reeve/Vacuum_Cleaner_nav/src/rf2o_laser_odometry -DCMAKE_INSTALL_PREFIX=/home/reeve/Vacuum_Cleaner_nav/install/rf2o_laser_odometry
+Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry -- -j4 -l4

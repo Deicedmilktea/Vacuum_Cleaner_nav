@@ -3,7 +3,7 @@ import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped, Quaternion
-from tf2_ros import TransformBroadcaster
+# from tf2_ros import TransformBroadcaster #不再需要广播TF
 import math
 from builtin_interfaces.msg import Time
 
@@ -40,8 +40,8 @@ class OdomPublisherNode(Node):
 
         # 创建 Odometry 发布者
         self.odom_pub_ = self.create_publisher(Odometry, '/odom', 10)
-        # 创建 TF 广播者
-        self.tf_broadcaster_ = TransformBroadcaster(self)
+        # 不再创建 TF 广播者
+        # self.tf_broadcaster_ = TransformBroadcaster(self)
 
         # 节点状态变量 (用于模拟运动)
         self.x_ = 0.0
@@ -53,12 +53,12 @@ class OdomPublisherNode(Node):
 
         self.last_time_ = self.get_clock().now()
 
-        # 创建定时器，周期性调用 publish_odom_tf 方法
-        self.timer_ = self.create_timer(1.0 / pub_rate, self.publish_odom_tf)
+        # 创建定时器，周期性调用 publish_odom 方法
+        self.timer_ = self.create_timer(1.0 / pub_rate, self.publish_odom)
 
-        self.get_logger().info(f"Odometry publisher started. Publishing Odom ({self.odom_frame_} -> {self.base_frame_}) at {pub_rate} Hz.")
+        self.get_logger().info(f"Odometry publisher started. Publishing Odom message to /odom at {pub_rate} Hz.")
 
-    def publish_odom_tf(self):
+    def publish_odom(self):
         current_time = self.get_clock().now()
         dt = (current_time - self.last_time_).nanoseconds / 1e9 # 计算时间差，单位：秒
 
@@ -93,22 +93,23 @@ class OdomPublisherNode(Node):
         # 发布 Odometry 消息
         self.odom_pub_.publish(odom_msg)
 
-        # 准备 TF 变换消息 (odom -> base_link)
-        t = TransformStamped()
-        t.header.stamp = current_time.to_msg()
-        t.header.frame_id = self.odom_frame_
-        t.child_frame_id = self.base_frame_
-
-        # 设置 TF 的平移
-        t.transform.translation.x = self.x_
-        t.transform.translation.y = self.y_
-        t.transform.translation.z = 0.0
-
-        # 设置 TF 的旋转 (与 odom 消息中的 pose 一致)
-        t.transform.rotation = odom_msg.pose.pose.orientation # 直接使用上面计算好的四元数
-
-        # 广播 TF 变换
-        self.tf_broadcaster_.sendTransform(t)
+        # 不再准备和广播 TF 变换
+        # # 准备 TF 变换消息 (odom -> base_link)
+        # t = TransformStamped()
+        # t.header.stamp = current_time.to_msg()
+        # t.header.frame_id = self.odom_frame_
+        # t.child_frame_id = self.base_frame_
+        #
+        # # 设置 TF 的平移
+        # t.transform.translation.x = self.x_
+        # t.transform.translation.y = self.y_
+        # t.transform.translation.z = 0.0
+        #
+        # # 设置 TF 的旋转 (与 odom 消息中的 pose 一致)
+        # t.transform.rotation = odom_msg.pose.pose.orientation # 直接使用上面计算好的四元数
+        #
+        # # 广播 TF 变换
+        # self.tf_broadcaster_.sendTransform(t)
 
         # 更新上次时间
         self.last_time_ = current_time

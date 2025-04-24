@@ -14,8 +14,8 @@ slam_toolbox:
     map_frame: map
     base_frame: base_link
     scan_topic: /scan
-    # Use scan_matching to improve odometry drift correction (requires more CPU)
-    use_scan_matching: true
+    # Use scan_matching: Set to false as EKF provides better odometry
+    use_scan_matching: false # <-- Changed from true to false
     # Lower means higher resolution
     resolution: 0.05
     # Maximum laser range to use for map building

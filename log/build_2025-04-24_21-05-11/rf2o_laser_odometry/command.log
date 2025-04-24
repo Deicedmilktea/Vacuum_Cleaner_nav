@@ -1,0 +1,1 @@
+Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry -- -j4 -l4

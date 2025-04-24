@@ -1,0 +1,129 @@
+[0.431s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'rf2o_laser_odometry']
+[0.432s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['rf2o_laser_odometry'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa0006fb0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa01fc460>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa01fc460>>)
+[1.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.256s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/reeve/Vacuum_Cleaner_nav'
+[1.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.310s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extensions ['ignore', 'ignore_ament_install']
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'ignore'
+[1.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'ignore_ament_install'
+[1.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extensions ['colcon_pkg']
+[1.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'colcon_pkg'
+[1.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extensions ['colcon_meta']
+[1.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'colcon_meta'
+[1.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extensions ['ros']
+[1.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/ldlidar_sl_ros2) by extension 'ros'
+[1.323s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ldlidar_sl_ros2' with type 'ros.ament_cmake' and name 'ldlidar_sl_ros2'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['ignore', 'ignore_ament_install']
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ignore'
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ignore_ament_install'
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['colcon_pkg']
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'colcon_pkg'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['colcon_meta']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'colcon_meta'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['ros']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ros'
+[1.331s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rf2o_laser_odometry' with type 'ros.ament_cmake' and name 'rf2o_laser_odometry'
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extensions ['ignore', 'ignore_ament_install']
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extension 'ignore'
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extension 'ignore_ament_install'
+[1.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extensions ['colcon_pkg']
+[1.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extension 'colcon_pkg'
+[1.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extensions ['colcon_meta']
+[1.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extension 'colcon_meta'
+[1.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extensions ['ros']
+[1.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_bluetooth) by extension 'ros'
+[1.337s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vacuum_bluetooth' with type 'ros.ament_python' and name 'vacuum_bluetooth'
+[1.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extensions ['ignore', 'ignore_ament_install']
+[1.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'ignore'
+[1.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'ignore_ament_install'
+[1.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extensions ['colcon_pkg']
+[1.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'colcon_pkg'
+[1.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extensions ['colcon_meta']
+[1.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'colcon_meta'
+[1.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extensions ['ros']
+[1.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_odom) by extension 'ros'
+[1.343s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vacuum_odom' with type 'ros.ament_python' and name 'vacuum_odom'
+[1.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extensions ['ignore', 'ignore_ament_install']
+[1.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'ignore'
+[1.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'ignore_ament_install'
+[1.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extensions ['colcon_pkg']
+[1.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'colcon_pkg'
+[1.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extensions ['colcon_meta']
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'colcon_meta'
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extensions ['ros']
+[1.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/vacuum_slam) by extension 'ros'
+[1.349s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vacuum_slam' with type 'ros.ament_python' and name 'vacuum_slam'
+[1.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.466s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'ldlidar_sl_ros2' in 'src/ldlidar_sl_ros2'
+[1.466s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'vacuum_bluetooth' in 'src/vacuum_bluetooth'
+[1.467s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'vacuum_odom' in 'src/vacuum_odom'
+[1.467s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'vacuum_slam' in 'src/vacuum_slam'
+[1.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.469s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.483s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 279 installed packages in /opt/ros/humble
+[1.489s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.654s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_args' from command line to 'None'
+[1.655s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_target' from command line to 'None'
+[1.655s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.655s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_clean_cache' from command line to 'False'
+[1.655s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_clean_first' from command line to 'False'
+[1.655s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_force_configure' from command line to 'False'
+[1.655s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'ament_cmake_args' from command line to 'None'
+[1.655s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'catkin_cmake_args' from command line to 'None'
+[1.656s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.656s] DEBUG:colcon.colcon_core.verb:Building package 'rf2o_laser_odometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/reeve/Vacuum_Cleaner_nav/install/rf2o_laser_odometry', 'merge_install': False, 'path': '/home/reeve/Vacuum_Cleaner_nav/src/rf2o_laser_odometry', 'symlink_install': False, 'test_result_base': None}
+[1.656s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.660s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.661s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/reeve/Vacuum_Cleaner_nav/src/rf2o_laser_odometry' with build type 'ament_cmake'
+[1.662s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/reeve/Vacuum_Cleaner_nav/src/rf2o_laser_odometry'
+[1.671s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.672s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.672s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.706s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/reeve/Vacuum_Cleaner_nav/src/rf2o_laser_odometry -DCMAKE_INSTALL_PREFIX=/home/reeve/Vacuum_Cleaner_nav/install/rf2o_laser_odometry
+[11.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/reeve/Vacuum_Cleaner_nav/src/rf2o_laser_odometry -DCMAKE_INSTALL_PREFIX=/home/reeve/Vacuum_Cleaner_nav/install/rf2o_laser_odometry
+[11.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/reeve/Vacuum_Cleaner_nav/build/rf2o_laser_odometry -- -j4 -l4

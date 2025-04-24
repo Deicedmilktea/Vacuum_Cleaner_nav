@@ -8,10 +8,12 @@ setup.py
 ../../build/vacuum_odom/vacuum_odom.egg-info/requires.txt
 ../../build/vacuum_odom/vacuum_odom.egg-info/top_level.txt
 ../../build/vacuum_odom/vacuum_odom.egg-info/zip-safe
+launch/imu_publisher.launch.py
 launch/odom_publisher.launch.py
 resource/vacuum_odom
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 vacuum_odom/__init__.py
+vacuum_odom/imu_publisher_node.py
 vacuum_odom/odom_publisher_node.py

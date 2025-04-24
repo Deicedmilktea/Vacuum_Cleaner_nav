@@ -24,6 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'odom_publisher_node = vacuum_odom.odom_publisher_node:main',
+            'imu_publisher_node = vacuum_odom.imu_publisher_node:main',
         ],
     },
 )

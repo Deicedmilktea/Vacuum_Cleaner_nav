@@ -1,0 +1,123 @@
+[0.000000] (-) TimerEvent: {}
+[0.001744] (-) JobUnselected: {'identifier': 'ldlidar_sl_ros2'}
+[0.002406] (-) JobUnselected: {'identifier': 'vacuum_bluetooth'}
+[0.002889] (vacuum_odom) JobQueued: {'identifier': 'vacuum_odom', 'dependencies': OrderedDict()}
+[0.003084] (vacuum_slam) JobQueued: {'identifier': 'vacuum_slam', 'dependencies': OrderedDict()}
+[0.003366] (vacuum_odom) JobStarted: {'identifier': 'vacuum_odom'}
+[0.059373] (vacuum_slam) JobStarted: {'identifier': 'vacuum_slam'}
+[0.099069] (-) TimerEvent: {}
+[0.199991] (-) TimerEvent: {}
+[0.300840] (-) TimerEvent: {}
+[0.401820] (-) TimerEvent: {}
+[0.502538] (-) TimerEvent: {}
+[0.603237] (-) TimerEvent: {}
+[0.703909] (-) TimerEvent: {}
+[0.804719] (-) TimerEvent: {}
+[0.905433] (-) TimerEvent: {}
+[1.006363] (-) TimerEvent: {}
+[1.107044] (-) TimerEvent: {}
+[1.207853] (-) TimerEvent: {}
+[1.308988] (-) TimerEvent: {}
+[1.409937] (-) TimerEvent: {}
+[1.510797] (-) TimerEvent: {}
+[1.611531] (-) TimerEvent: {}
+[1.712368] (-) TimerEvent: {}
+[1.813047] (-) TimerEvent: {}
+[1.913791] (-) TimerEvent: {}
+[2.014529] (-) TimerEvent: {}
+[2.115228] (-) TimerEvent: {}
+[2.215904] (-) TimerEvent: {}
+[2.316602] (-) TimerEvent: {}
+[2.417420] (-) TimerEvent: {}
+[2.518610] (-) TimerEvent: {}
+[2.619611] (-) TimerEvent: {}
+[2.720982] (-) TimerEvent: {}
+[2.821944] (-) TimerEvent: {}
+[2.923271] (-) TimerEvent: {}
+[3.024048] (-) TimerEvent: {}
+[3.124801] (-) TimerEvent: {}
+[3.225558] (-) TimerEvent: {}
+[3.326431] (-) TimerEvent: {}
+[3.427155] (-) TimerEvent: {}
+[3.527927] (-) TimerEvent: {}
+[3.628729] (-) TimerEvent: {}
+[3.729513] (-) TimerEvent: {}
+[3.830349] (-) TimerEvent: {}
+[3.932637] (-) TimerEvent: {}
+[4.034143] (-) TimerEvent: {}
+[4.136389] (-) TimerEvent: {}
+[4.237639] (-) TimerEvent: {}
+[4.339571] (-) TimerEvent: {}
+[4.424132] (vacuum_slam) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/vacuum_slam', 'build', '--build-base', '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/build', 'install', '--record', '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_slam', 'env': {'LANGUAGE': 'en_US:en', 'USER': 'reeve', 'SSH_CLIENT': '192.168.1.103 54032 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/reeve', 'OLDPWD': '/home/reeve/Vacuum_Cleaner_nav', 'TERM_PROGRAM_VERSION': '1.99.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-21f4e4a9-5380-45cc-adbe-533b5e106a41.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'LOGNAME': 'reeve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/reeve/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9affdbd9e1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam', 'SSH_CONNECTION': '192.168.1.103 54032 192.168.1.104 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1'}, 'shell': False}
+[4.440239] (-) TimerEvent: {}
+[4.443753] (vacuum_odom) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/vacuum_odom', 'build', '--build-base', '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build', 'install', '--record', '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/reeve/Vacuum_Cleaner_nav/src/vacuum_odom', 'env': {'LANGUAGE': 'en_US:en', 'USER': 'reeve', 'SSH_CLIENT': '192.168.1.103 54032 22', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/reeve', 'OLDPWD': '/home/reeve/Vacuum_Cleaner_nav', 'TERM_PROGRAM_VERSION': '1.99.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-21f4e4a9-5380-45cc-adbe-533b5e106a41.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'LOGNAME': 'reeve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/reeve/.vscode-server/cli/servers/Stable-17baf841131aa23349f217ca7c570c76ee87b957/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/reeve/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'PAPERSIZE': 'letter', 'LC_ADDRESS': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9affdbd9e1.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'en_US.UTF-8', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom', 'SSH_CONNECTION': '192.168.1.103 54032 192.168.1.104 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'COLCON': '1'}, 'shell': False}
+[4.540441] (-) TimerEvent: {}
+[4.645878] (-) TimerEvent: {}
+[4.746765] (-) TimerEvent: {}
+[4.847831] (-) TimerEvent: {}
+[4.948656] (-) TimerEvent: {}
+[5.049370] (-) TimerEvent: {}
+[5.150115] (-) TimerEvent: {}
+[5.250836] (-) TimerEvent: {}
+[5.351529] (-) TimerEvent: {}
+[5.452269] (-) TimerEvent: {}
+[5.553017] (-) TimerEvent: {}
+[5.653792] (-) TimerEvent: {}
+[5.707779] (vacuum_slam) StdoutLine: {'line': b'running egg_info\n'}
+[5.710924] (vacuum_slam) StdoutLine: {'line': b'writing ../../build/vacuum_slam/vacuum_slam.egg-info/PKG-INFO\n'}
+[5.712295] (vacuum_slam) StdoutLine: {'line': b'writing dependency_links to ../../build/vacuum_slam/vacuum_slam.egg-info/dependency_links.txt\n'}
+[5.713520] (vacuum_slam) StdoutLine: {'line': b'writing entry points to ../../build/vacuum_slam/vacuum_slam.egg-info/entry_points.txt\n'}
+[5.715514] (vacuum_slam) StdoutLine: {'line': b'writing requirements to ../../build/vacuum_slam/vacuum_slam.egg-info/requires.txt\n'}
+[5.716452] (vacuum_slam) StdoutLine: {'line': b'writing top-level names to ../../build/vacuum_slam/vacuum_slam.egg-info/top_level.txt\n'}
+[5.724316] (vacuum_odom) StdoutLine: {'line': b'running egg_info\n'}
+[5.725473] (vacuum_slam) StdoutLine: {'line': b"reading manifest file '../../build/vacuum_slam/vacuum_slam.egg-info/SOURCES.txt'\n"}
+[5.727568] (vacuum_odom) StdoutLine: {'line': b'writing ../../build/vacuum_odom/vacuum_odom.egg-info/PKG-INFO\n'}
+[5.729350] (vacuum_odom) StdoutLine: {'line': b'writing dependency_links to ../../build/vacuum_odom/vacuum_odom.egg-info/dependency_links.txt\n'}
+[5.730764] (vacuum_slam) StdoutLine: {'line': b"writing manifest file '../../build/vacuum_slam/vacuum_slam.egg-info/SOURCES.txt'\n"}
+[5.731649] (vacuum_slam) StdoutLine: {'line': b'running build\n'}
+[5.732473] (vacuum_slam) StdoutLine: {'line': b'running build_py\n'}
+[5.733005] (vacuum_odom) StdoutLine: {'line': b'writing entry points to ../../build/vacuum_odom/vacuum_odom.egg-info/entry_points.txt\n'}
+[5.734478] (vacuum_slam) StdoutLine: {'line': b'running install\n'}
+[5.735382] (vacuum_odom) StdoutLine: {'line': b'writing requirements to ../../build/vacuum_odom/vacuum_odom.egg-info/requires.txt\n'}
+[5.735929] (vacuum_odom) StdoutLine: {'line': b'writing top-level names to ../../build/vacuum_odom/vacuum_odom.egg-info/top_level.txt\n'}
+[5.736431] (vacuum_slam) StdoutLine: {'line': b'running install_lib\n'}
+[5.740525] (vacuum_slam) StdoutLine: {'line': b'running install_data\n'}
+[5.741798] (vacuum_slam) StdoutLine: {'line': b'copying launch/online_async_launch.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/launch\n'}
+[5.743289] (vacuum_slam) StdoutLine: {'line': b'copying config/ekf.yaml -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/config\n'}
+[5.744778] (vacuum_odom) StdoutLine: {'line': b"reading manifest file '../../build/vacuum_odom/vacuum_odom.egg-info/SOURCES.txt'\n"}
+[5.745524] (vacuum_slam) StdoutLine: {'line': b'copying config/mapper_params_online_async.yaml -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/share/vacuum_slam/config\n'}
+[5.746179] (vacuum_slam) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.749986] (vacuum_odom) StdoutLine: {'line': b"writing manifest file '../../build/vacuum_odom/vacuum_odom.egg-info/SOURCES.txt'\n"}
+[5.751504] (vacuum_odom) StdoutLine: {'line': b'running build\n'}
+[5.752966] (vacuum_odom) StdoutLine: {'line': b'running build_py\n'}
+[5.754235] (-) TimerEvent: {}
+[5.755036] (vacuum_odom) StdoutLine: {'line': b'copying vacuum_odom/imu_publisher_node.py -> /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom\n'}
+[5.757672] (vacuum_odom) StdoutLine: {'line': b'copying vacuum_odom/odom_publisher_node.py -> /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom\n'}
+[5.758597] (vacuum_odom) StdoutLine: {'line': b'running install\n'}
+[5.759328] (vacuum_odom) StdoutLine: {'line': b'running install_lib\n'}
+[5.759795] (vacuum_slam) StdoutLine: {'line': b"removing '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.761312] (vacuum_slam) StdoutLine: {'line': b'Copying ../../build/vacuum_slam/vacuum_slam.egg-info to /home/reeve/Vacuum_Cleaner_nav/install/vacuum_slam/lib/python3.10/site-packages/vacuum_slam-0.0.0-py3.10.egg-info\n'}
+[5.763530] (vacuum_odom) StdoutLine: {'line': b'copying /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom/imu_publisher_node.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom\n'}
+[5.764972] (vacuum_odom) StdoutLine: {'line': b'copying /home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/build/lib/vacuum_odom/odom_publisher_node.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom\n'}
+[5.767831] (vacuum_odom) StdoutLine: {'line': b'byte-compiling /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom/imu_publisher_node.py to imu_publisher_node.cpython-310.pyc\n'}
+[5.769351] (vacuum_slam) StdoutLine: {'line': b'running install_scripts\n'}
+[5.773046] (vacuum_odom) StdoutLine: {'line': b'byte-compiling /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom/odom_publisher_node.py to odom_publisher_node.cpython-310.pyc\n'}
+[5.776872] (vacuum_odom) StdoutLine: {'line': b'running install_data\n'}
+[5.778699] (vacuum_odom) StdoutLine: {'line': b'copying launch/imu_publisher.launch.py -> /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/share/vacuum_odom/launch\n'}
+[5.779951] (vacuum_odom) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.793185] (vacuum_odom) StdoutLine: {'line': b"removing '/home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.798238] (vacuum_odom) StdoutLine: {'line': b'Copying ../../build/vacuum_odom/vacuum_odom.egg-info to /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/python3.10/site-packages/vacuum_odom-0.0.0-py3.10.egg-info\n'}
+[5.805595] (vacuum_odom) StdoutLine: {'line': b'running install_scripts\n'}
+[5.854427] (-) TimerEvent: {}
+[5.859695] (vacuum_slam) StdoutLine: {'line': b"writing list of installed files to '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_slam/install.log'\n"}
+[5.908510] (vacuum_odom) StdoutLine: {'line': b'Installing imu_publisher_node script to /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/vacuum_odom\n'}
+[5.909866] (vacuum_odom) StdoutLine: {'line': b'Installing odom_publisher_node script to /home/reeve/Vacuum_Cleaner_nav/install/vacuum_odom/lib/vacuum_odom\n'}
+[5.912888] (vacuum_odom) StdoutLine: {'line': b"writing list of installed files to '/home/reeve/Vacuum_Cleaner_nav/build/vacuum_odom/install.log'\n"}
+[5.954869] (-) TimerEvent: {}
+[6.035781] (vacuum_slam) CommandEnded: {'returncode': 0}
+[6.055079] (-) TimerEvent: {}
+[6.132379] (vacuum_slam) JobEnded: {'identifier': 'vacuum_slam', 'rc': 0}
+[6.139206] (vacuum_odom) CommandEnded: {'returncode': 0}
+[6.155616] (-) TimerEvent: {}
+[6.176287] (vacuum_odom) JobEnded: {'identifier': 'vacuum_odom', 'rc': 0}
+[6.179683] (-) EventReactorShutdown: {}

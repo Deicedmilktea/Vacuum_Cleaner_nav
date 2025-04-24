@@ -1,3 +1,4 @@
 [console_scripts]
+imu_publisher_node = vacuum_odom.imu_publisher_node:main
 odom_publisher_node = vacuum_odom.odom_publisher_node:main
 
