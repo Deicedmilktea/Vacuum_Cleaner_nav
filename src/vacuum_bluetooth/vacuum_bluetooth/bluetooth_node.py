@@ -156,9 +156,9 @@ class BluetoothNode(Node):
                         # 将接收到的字节解码为 UTF-8 字符串并追加到缓冲区
                         buffer += data.decode('utf-8')
                         # 处理完整的消息 (例如，以换行符分隔的消息)
-                        while '' in buffer:
+                        while '\n' in buffer:
                             # 按换行符分割消息
-                            line, buffer = buffer.split('', 1)
+                            line, buffer = buffer.split('\n', 1)
                             line = line.strip() # 去除首尾空白字符
                             if line: # 避免发布空字符串
                                 self.get_logger().info(f"通过蓝牙接收到: {line}")
@@ -197,8 +197,8 @@ class BluetoothNode(Node):
         if self.client_sock:
             try:
                 # 如果客户端期望以换行符结束，确保数据包含换行符
-                if not data_str.endswith(''):
-                    data_str += ''
+                if not data_str.endswith('\n'):
+                    data_str += '\n'
                 # 使用 sendall 确保所有数据都被发送
                 self.client_sock.sendall(data_str.encode('utf-8'))
                 self.get_logger().info(f"通过蓝牙发送: {data_str.strip()}") # 记录日志时不包含换行符
