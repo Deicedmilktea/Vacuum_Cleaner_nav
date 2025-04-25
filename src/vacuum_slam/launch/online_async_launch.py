@@ -136,6 +136,6 @@ def generate_launch_description():
         imu_launch,             # IMU节点 (发布 /imu/data 消息)
         ekf_node,               # EKF 融合节点 (融合里程计和IMU数据，发布 /odom 和 TF odom->base_link)
         slam_toolbox_node,      # SLAM节点 (使用 EKF 提供的 /odom 和 TF，以及激光扫描构建地图)
-        bluetooth_comm_node,    # 蓝牙通信节点
+        # bluetooth_comm_node,    # 蓝牙通信节点
         # rviz_node               # 可视化节点
     ])
