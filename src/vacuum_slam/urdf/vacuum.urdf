@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot name="vacuum_robot">
+
+    <!-- Base Link -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.05" radius="0.15"/>
+            </geometry>
+            <material name="blue">
+                <color rgba="0 0 0.8 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- LiDAR Link -->
+    <link name="lidar_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.02" radius="0.03"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- IMU Link -->
+    <link name="imu_link">
+        <visual>
+            <geometry>
+                <box size="0.02 0.02 0.01"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- LiDAR Joint -->
+    <joint name="laser_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_laser"/>
+        <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    </joint>
+
+    <!-- IMU Joint -->
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="imu_link"/>
+        <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    </joint>
+
+</robot>

@@ -1,2 +1,0 @@
-Invoking command in '/home/reeve/Desktop/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/reeve/Desktop/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2 -- -j2 -l2
-Invoked command in '/home/reeve/Desktop/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/reeve/Desktop/Vacuum_Cleaner_nav/build/ldlidar_sl_ros2 -- -j2 -l2
