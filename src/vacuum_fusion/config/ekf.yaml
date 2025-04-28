@@ -1,0 +1,81 @@
+# Configuration for robot_localization EKF node
+# See http://docs.ros.org/en/melodic/api/robot_localization/html/state_estimation_nodes.html
+
+# General parameters
+frequency: 30.0             # Update frequency (Hz)
+sensor_timeout: 0.1         # Sensor timeout in seconds
+two_d_mode: true            # Operate in 2D mode (ignores Z, roll, pitch)
+
+# TF frames
+map_frame: map              # Not used by EKF but needed by nav2 stack
+odom_frame: odom            # Odometry frame (output of EKF)
+base_link_frame: base_link  # Robot's base frame
+world_frame: odom           # Use odom as the world frame for EKF
+
+# Publish transform odom -> base_link
+publish_tf: true
+
+# --- Sensor Inputs ---
+
+# Wheel Odometry (odom0)
+odom0: /wheel_odom          # Topic name from your STM32 interface node
+odom0_config: [true,  true,  false, # X, Y, Z position
+               false, false, true,  # Roll, Pitch, Yaw orientation
+               true,  true,  false, # X, Y, Z velocity
+               false, false, true,  # Roll, Pitch, Yaw angular velocity
+               false, false, false] # X, Y, Z acceleration
+odom0_queue_size: 10
+odom0_nodelay: false
+odom0_differential: false   # Set to true if wheel odom provides relative poses
+odom0_relative: false       # Set to true if wheel odom provides relative poses
+
+# IMU (imu0)
+imu0: /imu/data             # Topic name from your STM32 interface node
+imu0_config: [false, false, false, # X, Y, Z position
+              true,  true,  true,  # Roll, Pitch, Yaw orientation
+              false, false, false, # X, Y, Z velocity
+              true,  true,  true,  # Roll, Pitch, Yaw angular velocity
+              true,  true,  true]  # X, Y, Z acceleration (Set to false if accel is noisy/unreliable)
+imu0_queue_size: 10
+imu0_nodelay: false
+imu0_differential: false    # IMU provides absolute orientation and relative angular velocity/acceleration
+imu0_relative: false
+imu0_remove_gravitational_acceleration: true # If IMU reports acceleration including gravity
+
+# --- Process Noise Covariance ---
+# Adjust these values based on trust in the prediction model vs measurements
+# Higher values mean more trust in measurements, lower values mean more trust in prediction
+# Units are variance (squared units)
+process_noise_covariance: [0.05, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # X
+                           0.0,  0.05, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Y
+                           0.0,  0.0,  0.06, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Z (Ignored in 2D)
+                           0.0,  0.0,  0.0,  0.03, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Roll (Ignored in 2D)
+                           0.0,  0.0,  0.0,  0.0,  0.03, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Pitch (Ignored in 2D)
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.06, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Yaw
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.025,0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Vx
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.025,0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Vy
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.04, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  # Vz (Ignored in 2D)
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,  0.0,  0.0,  0.0,  # Vroll (Ignored in 2D)
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,  0.0,  0.0,  # Vpitch (Ignored in 2D)
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.02, 0.0,  0.0,  0.0,  # Vyaw
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,  # Ax (Ignored in 2D unless used)
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  # Ay (Ignored in 2D unless used)
+                           0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.015] # Az (Ignored in 2D unless used)
+
+# --- Initial State Covariance ---
+# Uncertainty in the initial state estimate
+initial_estimate_covariance: [1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,  0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9, 0.0,
+                              0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-9]
