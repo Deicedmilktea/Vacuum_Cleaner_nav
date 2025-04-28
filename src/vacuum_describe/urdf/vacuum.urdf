@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<robot name="vacuum_cleaner">
+
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.15"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1" radius="0.15"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <!-- Placeholder inertia -->
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.02"/>
+    </inertial>
+  </link>
+
+  <!-- IMU Link -->
+  <link name="imu_link">
+     <visual>
+      <geometry>
+        <box size="0.02 0.02 0.01"/>
+      </geometry>
+       <material name="red">
+         <color rgba="1.0 0.0 0.0 1"/>
+       </material>
+    </visual>
+     <collision>
+      <geometry>
+        <box size="0.02 0.02 0.01"/>
+      </geometry>
+    </collision>
+     <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="1e-6" ixy="0.0" ixz="0.0" iyy="1e-6" iyz="0.0" izz="1e-6"/>
+    </inertial>
+  </link>
+
+  <!-- Lidar Link -->
+  <link name="lidar_link">
+     <visual>
+      <geometry>
+        <cylinder length="0.04" radius="0.03"/>
+      </geometry>
+       <material name="blue">
+         <color rgba="0.0 0.0 1.0 1"/>
+       </material>
+    </visual>
+     <collision>
+      <geometry>
+        <cylinder length="0.04" radius="0.03"/>
+      </geometry>
+    </collision>
+     <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="1e-5" ixy="0.0" ixz="0.0" iyy="1e-5" iyz="0.0" izz="2e-5"/>
+    </inertial>
+  </link>
+
+  <!-- Joints -->
+
+  <!-- IMU Joint (Fixed) -->
+  <!-- IMPORTANT: Update xyz and rpy with the actual IMU position relative to base_link -->
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/> <!-- Example: IMU centered, 5cm above base_link origin -->
+  </joint>
+
+  <!-- Lidar Joint (Fixed) -->
+  <!-- IMPORTANT: Update xyz and rpy with the actual Lidar position relative to base_link -->
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.1 0.0 0.08" rpy="0 0 0"/> <!-- Example: Lidar 10cm forward, 8cm above base_link origin -->
+  </joint>
+
+  <!-- Add other links and joints as needed (e.g., wheels if you want visualization/simulation) -->
+  <!-- For TF purposes with robot_localization and slam_toolbox, only fixed joints for sensors are strictly necessary -->
+
+</robot>

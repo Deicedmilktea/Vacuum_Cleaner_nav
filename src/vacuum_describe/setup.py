@@ -2,7 +2,7 @@ import os
 from glob import glob
 from setuptools import find_packages, setup
 
-package_name = 'vacuum_interface'
+package_name = 'vacuum_describe'
 
 setup(
     name=package_name,
@@ -14,17 +14,18 @@ setup(
         ('share/' + package_name, ['package.xml']),
         # Include all launch files
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[pxy][yma]*'))),
+        # Include all URDF files
+        (os.path.join('share', package_name, 'urdf'), glob(os.path.join('urdf', '*.urdf*'))), # Include .urdf and potentially .xacro
     ],
-    install_requires=['setuptools', 'pyserial'], # Added pyserial dependency
+    install_requires=['setuptools'],
     zip_safe=True,
     maintainer='reeve',
     maintainer_email='2544141826@qq.com',
-    description='ROS 2 node to interface with STM32 via serial for IMU and Odometry data.',
+    description='Package containing the URDF description and TF setup for the vacuum cleaner robot.',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'stm32_interface_node = vacuum_interface.stm32_interface_node:main',
         ],
     },
 )

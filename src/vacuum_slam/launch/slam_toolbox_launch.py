@@ -21,7 +21,7 @@ def generate_launch_description():
     # Start SLAM Toolbox node (async mode)
     start_async_slam_toolbox_node = Node(
         package='slam_toolbox',
-        executable='online_async_slam_toolbox_node',
+        executable='async_slam_toolbox_node', # Corrected executable name
         name='slam_toolbox',
         output='screen',
         parameters=[slam_params_file],
