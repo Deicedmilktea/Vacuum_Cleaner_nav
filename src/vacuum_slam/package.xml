@@ -3,13 +3,13 @@
 <package format="3">
   <name>vacuum_slam</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="reeve@todo.todo">reeve</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Package to configure and launch slam_toolbox for mapping and localization.</description>
+  <maintainer email="2544141826@qq.com">reeve</maintainer>
+  <license>Apache-2.0</license>
 
-  <depend>rclpy</depend>
-  <depend>launch_ros</depend>
-  <depend>slam_toolbox</depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
