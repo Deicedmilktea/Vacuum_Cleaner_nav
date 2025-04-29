@@ -38,6 +38,7 @@ def generate_launch_description():
             'serial_port': serial_port,
             'baud_rate': baud_rate,
             'use_sim_time': use_sim_time
+            # Removed 'simulate': False, node will use its default (True)
             }]
     )
 
