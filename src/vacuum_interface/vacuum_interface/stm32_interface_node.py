@@ -335,10 +335,15 @@ class Stm32InterfaceNode(Node):
         self.last_sim_time = current_time
 
         # --- Simulate Motion ---
-        # Simple example: constant velocity, or change based on time
-        # To make it move in a circle:
-        self.sim_vx = 0  # m/s
-        self.sim_vyaw = 0 # rad/s
+        # Create a simple movement pattern for mapping
+        time_in_cycle = (current_time.nanoseconds / 1e9) % 10.0  # 10-second cycle
+        
+        if time_in_cycle < 5.0:  # First 5 seconds: move forward and rotate
+            self.sim_vx = 0.2  # m/s - moderate forward speed
+            self.sim_vyaw = 0.3  # rad/s - gentle rotation
+        else:  # Next 5 seconds: rotate in place
+            self.sim_vx = 0.0
+            self.sim_vyaw = 0.4  # rad/s - rotate a bit faster in place
         # Add some noise to the actual movement for realism?
         # actual_vx = self.sim_vx + random.gauss(0, 0.01)
         # actual_vyaw = self.sim_vyaw + random.gauss(0, 0.02)
