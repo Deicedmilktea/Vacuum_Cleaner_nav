@@ -340,10 +340,10 @@ class Stm32InterfaceNode(Node):
         
         if time_in_cycle < 5.0:  # First 5 seconds: move forward and rotate
             self.sim_vx = 0.2  # m/s - moderate forward speed
-            self.sim_vyaw = 0.3  # rad/s - gentle rotation
+            self.sim_vyaw = 0  # rad/s - gentle rotation
         else:  # Next 5 seconds: rotate in place
-            self.sim_vx = 0.0
-            self.sim_vyaw = 0.4  # rad/s - rotate a bit faster in place
+            self.sim_vx = -0.2
+            self.sim_vyaw = 0  # rad/s - rotate a bit faster in place
         # Add some noise to the actual movement for realism?
         # actual_vx = self.sim_vx + random.gauss(0, 0.01)
         # actual_vyaw = self.sim_vyaw + random.gauss(0, 0.02)
