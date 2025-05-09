@@ -26,6 +26,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'map_exporter_node = vacuum_slam.map_exporter_node:main',
         ],
     },
 )
