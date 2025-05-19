@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import rclpy
+import rclpy.logging # Added for explicit logger level setting
 from rclpy.node import Node
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Twist # Added for cmd_vel
 from tf_transformations import quaternion_from_euler
 import serial
 import time
@@ -15,9 +17,9 @@ class Stm32InterfaceNode(Node):
         super().__init__('stm32_interface_node')
 
         # Declare parameters
-        self.declare_parameter('serial_port', '/dev/ttyUSB1')
+        self.declare_parameter('serial_port', '/dev/ttyUSB0')
         self.declare_parameter('baud_rate', 115200)
-        self.declare_parameter('simulate', True) # Add simulate parameter
+        self.declare_parameter('simulate', False) # Add simulate parameter
 
         # Get parameters
         self.simulate = self.get_parameter('simulate').get_parameter_value().bool_value
@@ -27,6 +29,14 @@ class Stm32InterfaceNode(Node):
         # Publishers
         self.imu_publisher = self.create_publisher(Imu, '/imu/data', 10)
         self.odom_publisher = self.create_publisher(Odometry, '/wheel_odom', 10)
+
+        # Subscriber for velocity commands
+        self.cmd_vel_subscriber = self.create_subscription(
+            Twist,
+            '/cmd_vel',
+            self.cmd_vel_callback,
+            10)
+        self.get_logger().info("Subscribed to /cmd_vel")
 
         # Serial port setup or simulation timer
         self.serial_conn = None
@@ -66,7 +76,40 @@ class Stm32InterfaceNode(Node):
                  self.get_logger().error(f"Unexpected error during serial setup: {e}")
                  # Let main handle shutdown
 
-        self.get_logger().info("STM32 Interface Node initialization sequence complete.") # Changed log message slightly
+        self.get_logger().info("STM32 Interface Node initialization sequence complete.")
+
+    def cmd_vel_callback(self, msg):
+        """
+        Callback for receiving Twist messages from /cmd_vel.
+        Extracts linear.x and angular.z and sends them to STM32 via serial.
+        """
+        linear_x = msg.linear.x
+        angular_z = msg.angular.z
+        self.get_logger().info(f"Received cmd_vel: linear.x={linear_x:.2f}, angular.z={angular_z:.2f}") # Changed to info
+
+        if not self.simulate and self.serial_conn and self.serial_conn.is_open:
+            try:
+                # Pack the two floats (linear.x, angular.z) into bytes
+                # Using '<2f' for little-endian, two floats
+                # Consider adding start/end bytes or a checksum for more robust communication
+                data_to_send = struct.pack('<2f', linear_x, angular_z)
+                self.serial_conn.write(data_to_send)
+                self.get_logger().info(f"Sent {len(data_to_send)} bytes to STM32: {data_to_send.hex()}") # Changed to info
+            except serial.SerialException as e:
+                self.get_logger().error(f"Serial write error: {e}")
+                # Potentially handle reconnection or flag an error state
+            except struct.error as e:
+                self.get_logger().error(f"Error packing cmd_vel data: {e}")
+            except Exception as e:
+                self.get_logger().error(f"Unexpected error sending cmd_vel data: {e}", exc_info=True)
+        elif self.simulate:
+            # In simulation mode, we might want to update sim_vx and sim_vyaw
+            # based on cmd_vel for more interactive simulation.
+            # This part is currently handled by the simulation_callback's own logic.
+            # If you want cmd_vel to drive the simulation, update self.sim_vx and self.sim_vyaw here.
+            self.sim_vx = linear_x # Update simulated target linear velocity
+            self.sim_vyaw = angular_z # Update simulated target angular velocity
+            self.get_logger().info(f"SIMULATION: Updated target velocities: vx={self.sim_vx:.2f}, vyaw={self.sim_vyaw:.2f}") # Changed to info
 
     def serial_read_callback(self):
         if self.serial_conn and self.serial_conn.is_open:
@@ -75,7 +118,7 @@ class Stm32InterfaceNode(Node):
                 if self.serial_conn.in_waiting > 0:
                     data_bytes = self.serial_conn.read(self.serial_conn.in_waiting)
                     self.read_buffer += data_bytes
-                    self.get_logger().debug(f"Read {len(data_bytes)} bytes. Buffer size: {len(self.read_buffer)}")
+                    self.get_logger().info(f"Read {len(data_bytes)} bytes. Buffer size: {len(self.read_buffer)}")
 
                     # --- Protocol Parsing Placeholder ---
                     # This is where you need to implement the logic to parse your specific
@@ -86,7 +129,7 @@ class Stm32InterfaceNode(Node):
                     # --- Example Parsing Logic (Replace with your actual protocol) ---
                     # Let's assume a simple protocol:
                     # Start Byte (0xA5) | Type (1=IMU, 2=Odom) | Length | Data | Checksum
-                    HEADER = b'\xA5' # Example header byte
+                    HEADER = b'\xA5' # Start frame byte 0xA5
                     MIN_PACKET_LEN = 4 # Header + Type + Length + Checksum (at least)
 
                     while len(self.read_buffer) >= MIN_PACKET_LEN:
@@ -470,6 +513,11 @@ def main(args=None):
     try:
         # Attempt to create the node instance
         node = Stm32InterfaceNode()
+        # Set logger level to DEBUG for this node
+        if node:
+            rclpy.logging.set_logger_level(node.get_logger().name, rclpy.logging.LoggingSeverity.DEBUG)
+            node.get_logger().info(f"Logger level set to DEBUG for {node.get_logger().name}")
+
         # Check if the timer was successfully created. This happens in both
         # successful hardware connection and simulation mode. If it's None,
         # it implies serial connection failed in hardware mode and __init__ might have exited early.
@@ -501,7 +549,6 @@ def main(args=None):
         if rclpy.ok():
             rclpy.shutdown()
         print("ROS 2 shutdown complete.")
-
 
 if __name__ == '__main__':
     main()
