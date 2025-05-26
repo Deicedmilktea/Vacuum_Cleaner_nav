@@ -85,16 +85,23 @@ class Stm32InterfaceNode(Node):
         """
         linear_x = msg.linear.x
         angular_z = msg.angular.z
-        self.get_logger().info(f"Received cmd_vel: linear.x={linear_x:.2f}, angular.z={angular_z:.2f}") # Changed to info
+        # self.get_logger().info(f"Received cmd_vel: linear.x={linear_x:.2f}, angular.z={angular_z:.2f}") # Changed to info
 
         if not self.simulate and self.serial_conn and self.serial_conn.is_open:
             try:
                 # Pack the two floats (linear.x, angular.z) into bytes
                 # Using '<2f' for little-endian, two floats
                 # Consider adding start/end bytes or a checksum for more robust communication
-                data_to_send = struct.pack('<2f', linear_x, angular_z)
+                # Add header byte (0xA6) and length byte (8 for two floats)
+                header = b"\xA6"
+                data_length = 8  # Two floats, each 4 bytes
+
+                # Pack the data: header byte + length byte + two floats
+                data_payload = struct.pack("<2f", linear_x, angular_z)
+                data_to_send = header + bytes([data_length]) + data_payload
+                
                 self.serial_conn.write(data_to_send)
-                self.get_logger().info(f"Sent {len(data_to_send)} bytes to STM32: {data_to_send.hex()}") # Changed to info
+                # self.get_logger().info(f"Sent {len(data_to_send)} bytes to STM32: {data_to_send.hex()}") # Changed to info
             except serial.SerialException as e:
                 self.get_logger().error(f"Serial write error: {e}")
                 # Potentially handle reconnection or flag an error state
@@ -109,7 +116,7 @@ class Stm32InterfaceNode(Node):
             # If you want cmd_vel to drive the simulation, update self.sim_vx and self.sim_vyaw here.
             self.sim_vx = linear_x # Update simulated target linear velocity
             self.sim_vyaw = angular_z # Update simulated target angular velocity
-            self.get_logger().info(f"SIMULATION: Updated target velocities: vx={self.sim_vx:.2f}, vyaw={self.sim_vyaw:.2f}") # Changed to info
+            # self.get_logger().info(f"SIMULATION: Updated target velocities: vx={self.sim_vx:.2f}, vyaw={self.sim_vyaw:.2f}") # Changed to info
 
     def serial_read_callback(self):
         if self.serial_conn and self.serial_conn.is_open:
@@ -118,7 +125,7 @@ class Stm32InterfaceNode(Node):
                 if self.serial_conn.in_waiting > 0:
                     data_bytes = self.serial_conn.read(self.serial_conn.in_waiting)
                     self.read_buffer += data_bytes
-                    self.get_logger().info(f"Read {len(data_bytes)} bytes. Buffer size: {len(self.read_buffer)}")
+                    # self.get_logger().info(f"Read {len(data_bytes)} bytes. Buffer size: {len(self.read_buffer)}")
 
                     # --- Protocol Parsing Placeholder ---
                     # This is where you need to implement the logic to parse your specific
@@ -171,14 +178,18 @@ class Stm32InterfaceNode(Node):
                             data_payload = packet[3:-1] # Extract data payload
 
                             if msg_type == 1: # IMU Data
+                                # self.get_logger().info("Processing IMU data packet")
                                 self.parse_and_publish_imu(data_payload)
                             elif msg_type == 2: # Odometry Data
+                                # self.get_logger().info("Processing Odometry data packet")
                                 self.parse_and_publish_odom(data_payload)
                             else:
                                 self.get_logger().warn(f"Unknown message type: {msg_type}")
 
                             # Remove processed packet from buffer
-                            self.read_buffer = self.read_buffer[total_packet_len:]
+                            self.read_buffer = b'' # Clear buffer after processing
+                            # self.read_buffer = self.read_buffer[total_packet_len:]
+                            # self.get_logger().info(f"Processed {total_packet_len} bytes from buffer. Remaining buffer size: {len(self.read_buffer)}")
                         else:
                             # Not enough data for the full packet yet
                             break # Wait for more data
@@ -291,6 +302,7 @@ class Stm32InterfaceNode(Node):
             return
         try:
             vx, vyaw = struct.unpack('<2f', data)
+            # self.get_logger().debug(f"Unpacked Twist data: vx={vx}, vyaw={vyaw}")
             x, y, yaw, vy = 0.0, 0.0, 0.0, 0.0 # Set pose and unmeasured twist to zero
             publish_pose = False # Indicate we only have twist
         except struct.error as e:
@@ -303,6 +315,8 @@ class Stm32InterfaceNode(Node):
             odom_msg.header.stamp = self.get_clock().now().to_msg()
             odom_msg.header.frame_id = "odom"       # Standard odom frame
             odom_msg.child_frame_id = "base_link" # Or your robot's base frame
+
+            # self.get_logger().debug(f"Fill Twist data: vx={vx}, vyaw={vyaw}")
 
             # --- Fill Pose ---
             odom_msg.pose.pose.position.x = x
