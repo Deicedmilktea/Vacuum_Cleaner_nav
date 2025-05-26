@@ -17,7 +17,7 @@ class Stm32InterfaceNode(Node):
         super().__init__('stm32_interface_node')
 
         # Declare parameters
-        self.declare_parameter('serial_port', '/dev/ttyUSB0')
+        self.declare_parameter('serial_port', '/dev/ttyUSB2')
         self.declare_parameter('baud_rate', 115200)
         self.declare_parameter('simulate', False) # Add simulate parameter
 
@@ -125,7 +125,7 @@ class Stm32InterfaceNode(Node):
                 if self.serial_conn.in_waiting > 0:
                     data_bytes = self.serial_conn.read(self.serial_conn.in_waiting)
                     self.read_buffer += data_bytes
-                    # self.get_logger().info(f"Read {len(data_bytes)} bytes. Buffer size: {len(self.read_buffer)}")
+                    self.get_logger().info(f"Read {len(data_bytes)} bytes. Buffer size: {len(self.read_buffer)}")
 
                     # --- Protocol Parsing Placeholder ---
                     # This is where you need to implement the logic to parse your specific
@@ -316,7 +316,7 @@ class Stm32InterfaceNode(Node):
             odom_msg.header.frame_id = "odom"       # Standard odom frame
             odom_msg.child_frame_id = "base_link" # Or your robot's base frame
 
-            # self.get_logger().debug(f"Fill Twist data: vx={vx}, vyaw={vyaw}")
+            self.get_logger().debug(f"Fill Twist data: vx={vx}, vyaw={vyaw}")
 
             # --- Fill Pose ---
             odom_msg.pose.pose.position.x = x
@@ -396,10 +396,10 @@ class Stm32InterfaceNode(Node):
         time_in_cycle = (current_time.nanoseconds / 1e9) % 10.0  # 10-second cycle
         
         if time_in_cycle < 5.0:  # First 5 seconds: move forward and rotate
-            self.sim_vx = 0.2  # m/s - moderate forward speed
+            self.sim_vx = 0  # m/s - moderate forward speed
             self.sim_vyaw = 0  # rad/s - gentle rotation
         else:  # Next 5 seconds: rotate in place
-            self.sim_vx = -0.2
+            self.sim_vx = 0
             self.sim_vyaw = 0  # rad/s - rotate a bit faster in place
         # Add some noise to the actual movement for realism?
         # actual_vx = self.sim_vx + random.gauss(0, 0.01)

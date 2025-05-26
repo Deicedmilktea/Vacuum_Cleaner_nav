@@ -23,11 +23,11 @@ slam_toolbox:
 
     # General Parameters
     resolution: 0.05          # Map resolution (meters/pixel)
-    map_update_interval: 2.0  # Reduced update interval for more frequent updates - Increased
-    max_laser_range: 25.0     # Adjusted for typical indoor lidar range
-    minimum_time_interval: 0.2 # Reduced for more frequent scan processing
-    transform_timeout: 0.5    # TF timeout (seconds) - Increased
-    tf_buffer_duration: 70.0  # TF buffer duration (seconds) - Slightly Increased
+    map_update_interval: 0.5  # Reduced update interval for more frequent updates
+    max_laser_range: 12.0     # Adjusted for typical indoor lidar range
+    minimum_time_interval: 0.1 # Reduced for more frequent scan processing
+    transform_timeout: 0.2    # TF timeout (seconds)
+    tf_buffer_duration: 30.0  # TF buffer duration (seconds)
 
     # Scan Matcher Parameters
     matcher_iterations: 5
@@ -48,9 +48,7 @@ slam_toolbox:
 
     # Other settings
     debug_logging: false
-    message_filter_queue_size: 300 # Doubled queue size to handle more messages
-    throttle_scans: 10        # Process every 10th scan to reduce processing load
-    minimum_time_interval: 0.5 # Increased to reduce processing frequency
+    throttle_scans: 1         # Process every N scans
     use_map_saver: true       # Enable map saving service
     map_file_name: "saved_map" # Default name for saved map
     map_save_duration: 60.0   # Auto-save interval (seconds), 0 to disable

@@ -35,7 +35,7 @@ def generate_launch_description():
             {"point_cloud_2d_topic_name": "pointcloud2d"},
             {"frame_id": "lidar_link"},  # Changed from base_laser to match URDF
             {
-                "port_name": "/dev/ttyUSB1"
+                "port_name": "/dev/ttyUSB0"
             },  # Ensure this is the correct port for your LD14
             {"serial_baudrate": 115200},
             {"laser_scan_dir": True},

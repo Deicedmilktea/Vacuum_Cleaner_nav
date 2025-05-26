@@ -102,6 +102,6 @@ def generate_launch_description():
             declare_use_composition_cmd,
             declare_autostart_cmd,
             nav2_bringup_launch,
-            rviz_node,
+            # rviz_node,
         ]
     )
