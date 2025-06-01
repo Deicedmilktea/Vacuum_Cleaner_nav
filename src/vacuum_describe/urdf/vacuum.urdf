@@ -72,7 +72,7 @@
   <joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
     <child link="imu_link"/>
-    <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/> <!-- Example: IMU centered, 5cm above base_link origin -->
+    <origin xyz="0.05 0.0 0.05" rpy="0 0 0"/> <!-- Example: IMU centered, 5cm above base_link origin -->
   </joint>
 
   <!-- Lidar Joint (Fixed) -->
@@ -80,7 +80,7 @@
   <joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="lidar_link"/>
-    <origin xyz="0.1 0.0 0.08" rpy="0 0 0"/> <!-- Example: Lidar 10cm forward, 8cm above base_link origin -->
+    <origin xyz="0.12 0.0 0.08" rpy="0 0 -1.5708"/> <!-- Example: Lidar 10cm forward, 8cm above base_link origin -->
   </joint>
 
   <!-- Add other links and joints as needed (e.g., wheels if you want visualization/simulation) -->

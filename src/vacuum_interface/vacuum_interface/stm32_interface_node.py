@@ -17,7 +17,7 @@ class Stm32InterfaceNode(Node):
         super().__init__('stm32_interface_node')
 
         # Declare parameters
-        self.declare_parameter('serial_port', '/dev/ttyUSB2')
+        self.declare_parameter('serial_port', '/dev/ttyUSB1')
         self.declare_parameter('baud_rate', 115200)
         self.declare_parameter('simulate', False) # Add simulate parameter
 
@@ -42,6 +42,12 @@ class Stm32InterfaceNode(Node):
         self.serial_conn = None
         self.timer = None
         self.timer_period = 0.02 # seconds (50Hz) - Use a reasonable rate for simulation
+
+        # Odometry state variables for integration when only twist is received
+        self.current_x = 0.0
+        self.current_y = 0.0
+        self.current_yaw = 0.0
+        self.last_odom_publish_time = None
 
         if self.simulate:
             self.get_logger().info("Running in SIMULATION mode. No serial connection.")
@@ -125,7 +131,7 @@ class Stm32InterfaceNode(Node):
                 if self.serial_conn.in_waiting > 0:
                     data_bytes = self.serial_conn.read(self.serial_conn.in_waiting)
                     self.read_buffer += data_bytes
-                    self.get_logger().info(f"Read {len(data_bytes)} bytes. Buffer size: {len(self.read_buffer)}")
+                    # self.get_logger().info(f"Read {len(data_bytes)} bytes. Buffer size: {len(self.read_buffer)}")
 
                     # --- Protocol Parsing Placeholder ---
                     # This is where you need to implement the logic to parse your specific
@@ -149,7 +155,7 @@ class Stm32InterfaceNode(Node):
 
                         # Move buffer start to the header
                         if start_index > 0:
-                            self.get_logger().warn(f"Discarding {start_index} bytes before header.")
+                            # self.get_logger().warn(f"Discarding {start_index} bytes before header.")
                             self.read_buffer = self.read_buffer[start_index:]
 
                         # Check if we have enough data for header + type + length
@@ -269,7 +275,7 @@ class Stm32InterfaceNode(Node):
             ]
 
             self.imu_publisher.publish(imu_msg)
-            self.get_logger().debug("Published IMU message")
+            # self.get_logger().debug("Published IMU message")
 
         except struct.error as e:
             self.get_logger().error(f"Failed to unpack IMU data: {e}")
@@ -303,27 +309,46 @@ class Stm32InterfaceNode(Node):
         try:
             vx, vyaw = struct.unpack('<2f', data)
             # self.get_logger().debug(f"Unpacked Twist data: vx={vx}, vyaw={vyaw}")
-            x, y, yaw, vy = 0.0, 0.0, 0.0, 0.0 # Set pose and unmeasured twist to zero
-            publish_pose = False # Indicate we only have twist
+            # x, y, yaw, vy are now calculated based on vx, vyaw
+            vy = 0.0 # Assuming non-holonomic, vy is not directly measured from wheel encoders
+            publish_pose = True # Indicate we are calculating and publishing pose
         except struct.error as e:
             self.get_logger().error(f"Failed to unpack Odom data (Twist only): {e}")
             return
         # --- End Options ---
 
         try:
+            current_time_ros = self.get_clock().now()
+            dt = 0.0
+            if self.last_odom_publish_time is not None:
+                dt = (current_time_ros - self.last_odom_publish_time).nanoseconds / 1e9
+            self.last_odom_publish_time = current_time_ros
+
+            # Integrate velocities to get pose
+            # Update yaw
+            self.current_yaw += vyaw * dt
+            # Normalize yaw to be within [-pi, pi]
+            self.current_yaw = math.atan2(math.sin(self.current_yaw), math.cos(self.current_yaw))
+
+            # Update x and y
+            delta_x = vx * math.cos(self.current_yaw) * dt
+            delta_y = vx * math.sin(self.current_yaw) * dt
+            self.current_x += delta_x
+            self.current_y += delta_y
+
             odom_msg = Odometry()
-            odom_msg.header.stamp = self.get_clock().now().to_msg()
+            odom_msg.header.stamp = current_time_ros.to_msg()
             odom_msg.header.frame_id = "odom"       # Standard odom frame
             odom_msg.child_frame_id = "base_link" # Or your robot's base frame
 
-            self.get_logger().debug(f"Fill Twist data: vx={vx}, vyaw={vyaw}")
+            self.get_logger().debug(f"Fill Twist data: vx={vx}, vyaw={vyaw}, yaw={self.current_yaw}")
 
             # --- Fill Pose ---
-            odom_msg.pose.pose.position.x = x
-            odom_msg.pose.pose.position.y = y
+            odom_msg.pose.pose.position.x = self.current_x
+            odom_msg.pose.pose.position.y = self.current_y
             odom_msg.pose.pose.position.z = 0.0 # Assuming 2D
 
-            q = quaternion_from_euler(0.0, 0.0, yaw)
+            q = quaternion_from_euler(0.0, 0.0, self.current_yaw)
             odom_msg.pose.pose.orientation.x = q[0]
             odom_msg.pose.pose.orientation.y = q[1]
             odom_msg.pose.pose.orientation.z = q[2]
@@ -335,7 +360,7 @@ class Stm32InterfaceNode(Node):
             odom_msg.twist.twist.linear.z = 0.0
             odom_msg.twist.twist.angular.x = 0.0
             odom_msg.twist.twist.angular.y = 0.0
-            odom_msg.twist.twist.angular.z = vyaw
+            odom_msg.twist.twist.angular.z = 0.0
 
             # --- Covariance Matrices (PLACEHOLDERS - TUNE THESE) ---
             P_POSE_DEFAULT = 1e-3
@@ -373,7 +398,7 @@ class Stm32InterfaceNode(Node):
             ]
 
             self.odom_publisher.publish(odom_msg)
-            self.get_logger().debug("Published Odometry message")
+            # self.get_logger().debug("Published Odometry message")
 
         except ImportError:
              self.get_logger().error("Failed to import tf_transformations. Install it: sudo apt install python3-tf-transformations-pip")

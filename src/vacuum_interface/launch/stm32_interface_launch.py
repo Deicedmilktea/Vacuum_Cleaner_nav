@@ -7,12 +7,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    # Launch arguments
-    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    serial_port = LaunchConfiguration('serial_port', default='/dev/ttyUSB1')
-    baud_rate = LaunchConfiguration('baud_rate', default='115200')
-
-    # Declare Launch Arguments
+    # Declare Launch Arguments first to define their defaults
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time',
         default_value='false',
@@ -20,13 +15,19 @@ def generate_launch_description():
 
     declare_serial_port_cmd = DeclareLaunchArgument(
         'serial_port',
-        default_value='/dev/ttyUSB0',
+        default_value='/dev/ttyUSB1',  # Defaulting STM32 interface to /dev/ttyUSB1
         description='Serial port for STM32 connection')
 
     declare_baud_rate_cmd = DeclareLaunchArgument(
         'baud_rate',
         default_value='115200',
         description='Baud rate for STM32 connection')
+
+    # Launch configurations that will pick up the defaults from DeclareLaunchArgument
+    # if not overridden when this launch file is included.
+    use_sim_time_config = LaunchConfiguration('use_sim_time')
+    serial_port_config = LaunchConfiguration('serial_port')
+    baud_rate_config = LaunchConfiguration('baud_rate')
 
     # STM32 Interface Node
     stm32_interface_node = Node(
@@ -35,10 +36,10 @@ def generate_launch_description():
         name='stm32_interface_node',
         output='screen',
         parameters=[{
-            'serial_port': serial_port,
-            'baud_rate': baud_rate,
-            'use_sim_time': use_sim_time
-            # Removed 'simulate': False, node will use its default (True)
+            'serial_port': serial_port_config,  # Uses /dev/ttyUSB1 by default now
+            'baud_rate': baud_rate_config,
+            'use_sim_time': use_sim_time_config,
+            'simulate': False  # Explicitly set to False to ensure serial mode
             }]
     )
 
