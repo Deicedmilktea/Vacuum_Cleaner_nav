@@ -11,18 +11,13 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     # Get package directories
     nav2_bringup_dir = get_package_share_directory('nav2_bringup')
-    vacuum_slam_dir = get_package_share_directory('vacuum_slam')
     vacuum_nav_dir = get_package_share_directory('vacuum_nav')
     
-    # Include SLAM launch
-    slam_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            os.path.join(vacuum_slam_dir, 'launch', 'slam_toolbox_launch.py')
-        ])
-    )
-    
     # Nav2 params file
-    nav2_params_path = os.path.join(nav2_bringup_dir, 'params', 'nav2_params.yaml')
+    nav2_params_path = os.path.join(vacuum_nav_dir, 'config', 'nav2_params.yaml')
+    
+    # Behavior tree path
+    bt_xml_path = os.path.join(vacuum_nav_dir, 'behavior_trees')
     
     # Include Nav2 bringup launch
     nav2_launch = IncludeLaunchDescription(
@@ -32,7 +27,8 @@ def generate_launch_description():
         launch_arguments={
             'params_file': nav2_params_path,
             'use_sim_time': 'false',
-            'autostart': 'true'
+            'autostart': 'true',
+            'bt_xml_file': os.path.join(bt_xml_path, 'navigate.xml')
         }.items()
     )
     
@@ -45,7 +41,6 @@ def generate_launch_description():
     )
     
     return LaunchDescription([
-        slam_launch,
         nav2_launch,
         navigation_node
     ])
