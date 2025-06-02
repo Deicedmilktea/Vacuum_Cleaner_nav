@@ -35,23 +35,21 @@ slam_toolbox:
     matcher_maximum_distance: 0.5  # Increased to allow for more movement between scans
     matcher_translation_weight: 1.0
     matcher_rotation_weight: 0.5   # Reduced to make rotation matching less strict
-    # ... other matcher parameters can be added if needed
 
     # Loop Closure Parameters
     do_loop_closing: true
     loop_match_minimum_response_fine: 0.5  # Reduced for easier loop closure
     loop_match_maximum_distance: 5.0      # Reduced for more reliable matching
-    # ... other loop closure parameters
 
     # Map Parameters
-    map_start_at_dock: false # If you have a dock pose
+    map_start_at_dock: false  # If you have a dock pose
 
     # Other settings
     debug_logging: false
     throttle_scans: 1         # Process every N scans
-    use_map_saver: true       # Enable map saving service
-    map_file_name: "saved_map" # Default name for saved map
-    map_save_duration: 60.0   # Auto-save interval (seconds), 0 to disable
+    use_map_saver: false      # Disable map saving service
+    enable_interactive_mode: false # Disable interactive mode
+    load_map_file: ""        # Don't try to load any map file
 
     # Consider adding parameters related to your specific lidar and environment
     # e.g., min_laser_range, erosion_radius, etc.

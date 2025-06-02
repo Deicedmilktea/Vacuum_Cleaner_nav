@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <robot name="vacuum_cleaner">
 
+  <!-- Dummy Base Link (root link without inertia) -->
+  <link name="base_footprint">
+    <!-- This is an empty, invisible link that serves as the ground-level reference frame -->
+  </link>
+
   <!-- Base Link -->
   <link name="base_link">
     <visual>
@@ -67,23 +72,25 @@
 
   <!-- Joints -->
 
+  <!-- Base Joint -->
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/> <!-- Half the height of base_link cylinder -->
+  </joint>
+
   <!-- IMU Joint (Fixed) -->
-  <!-- IMPORTANT: Update xyz and rpy with the actual IMU position relative to base_link -->
   <joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
     <child link="imu_link"/>
-    <origin xyz="0.05 0.0 0.05" rpy="0 0 0"/> <!-- Example: IMU centered, 5cm above base_link origin -->
+    <origin xyz="0.05 0.0 0.05" rpy="0 0 0"/>
   </joint>
 
   <!-- Lidar Joint (Fixed) -->
-  <!-- IMPORTANT: Update xyz and rpy with the actual Lidar position relative to base_link -->
   <joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="lidar_link"/>
-    <origin xyz="0.12 0.0 0.08" rpy="0 0 -1.5708"/> <!-- Example: Lidar 10cm forward, 8cm above base_link origin -->
+    <origin xyz="0.12 0.0 0.08" rpy="0 0 -1.5708"/>
   </joint>
-
-  <!-- Add other links and joints as needed (e.g., wheels if you want visualization/simulation) -->
-  <!-- For TF purposes with robot_localization and slam_toolbox, only fixed joints for sensors are strictly necessary -->
 
 </robot>
