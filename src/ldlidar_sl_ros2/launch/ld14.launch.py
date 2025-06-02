@@ -35,7 +35,7 @@ def generate_launch_description():
             {"point_cloud_2d_topic_name": "pointcloud2d"},
             {"frame_id": "lidar_link"},  # Changed from base_laser to match URDF
             {
-                "port_name": "/dev/ttyUSB0"
+                "port_name": "/dev/ttyUSB1"
             },  # Ensure this is the correct port for your LD14
             {"serial_baudrate": 115200},
             {"laser_scan_dir": True},
@@ -44,19 +44,8 @@ def generate_launch_description():
             {"angle_crop_max": 225.0},
         ],
     )
-
-    # base_link to base_laser tf node
-    base_link_to_laser_tf_node = Node(
-        package="tf2_ros",
-        executable="static_transform_publisher",
-        name="base_link_to_base_laser_ld14",
-        arguments=["0", "0", "0.18", "0", "0", "0", "base_link", "base_laser"],
-    )
-
+    
     # Define LaunchDescription variable
     ld = LaunchDescription()
-
     ld.add_action(ldlidar_node)
-    # ld.add_action(base_link_to_laser_tf_node)
-
     return ld

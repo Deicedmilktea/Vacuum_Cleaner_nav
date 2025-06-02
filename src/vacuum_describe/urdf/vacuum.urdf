@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <robot name="vacuum_cleaner">
 
-  <!-- Dummy Base Link (root link without inertia) -->
-  <link name="base_footprint">
-    <!-- This is an empty, invisible link that serves as the ground-level reference frame -->
-  </link>
-
   <!-- Base Link -->
   <link name="base_link">
     <visual>
@@ -72,13 +67,6 @@
 
   <!-- Joints -->
 
-  <!-- Base Joint -->
-  <joint name="base_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="base_link"/>
-    <origin xyz="0 0 0.05" rpy="0 0 0"/> <!-- Half the height of base_link cylinder -->
-  </joint>
-
   <!-- IMU Joint (Fixed) -->
   <joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
@@ -90,7 +78,7 @@
   <joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="lidar_link"/>
-    <origin xyz="0.12 0.0 0.08" rpy="0 0 -1.5708"/>
+    <origin xyz="0.0 -0.1 0.1" rpy="0 0 0"/>
   </joint>
 
 </robot>

@@ -341,7 +341,7 @@ class Stm32InterfaceNode(Node):
             odom_msg.header.frame_id = "odom"       # Standard odom frame
             odom_msg.child_frame_id = "base_link" # Or your robot's base frame
 
-            self.get_logger().debug(f"Fill Twist data: vx={vx}, vyaw={vyaw}, yaw={self.current_yaw}")
+            # self.get_logger().debug(f"Fill Twist data: vx={vx}, vyaw={vyaw}, yaw={self.current_yaw}")
 
             # --- Fill Pose ---
             odom_msg.pose.pose.position.x = self.current_x

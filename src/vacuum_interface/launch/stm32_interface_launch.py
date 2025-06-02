@@ -15,7 +15,7 @@ def generate_launch_description():
 
     declare_serial_port_cmd = DeclareLaunchArgument(
         'serial_port',
-        default_value='/dev/ttyUSB1',  # Defaulting STM32 interface to /dev/ttyUSB1
+        default_value='/dev/ttyUSB0',  # Defaulting STM32 interface to /dev/ttyUSB1
         description='Serial port for STM32 connection')
 
     declare_baud_rate_cmd = DeclareLaunchArgument(

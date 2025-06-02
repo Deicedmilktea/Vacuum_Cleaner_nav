@@ -1,61 +1,51 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
-from launch.conditions import IfCondition
-from launch.substitutions import LaunchConfiguration
+from launch.actions import IncludeLaunchDescription, RegisterEventHandler
+from launch.event_handlers import OnProcessStart
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
-from ament_index_python.packages import get_package_share_directory
+from launch.substitutions import PathJoinSubstitution
+from launch_ros.substitutions import FindPackageShare
 import os
+from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
-    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    params_file = os.path.join(get_package_share_directory('vacuum_nav'), 'config', 'nav2_params.yaml')
-
-    nav2_launch = [
-        Node(
-            package='nav2_controller',
-            executable='controller_server',
-            name='controller_server',
-            output='screen',
-            parameters=[params_file]),
-
-        Node(
-            package='nav2_planner',
-            executable='planner_server',
-            name='planner_server',
-            output='screen',
-            parameters=[params_file]),
-
-        Node(
-            package='nav2_recoveries',
-            executable='recoveries_server',
-            name='recoveries_server',
-            output='screen',
-            parameters=[params_file]),
-
-        Node(
-            package='nav2_bt_navigator',
-            executable='bt_navigator',
-            name='bt_navigator',
-            output='screen',
-            parameters=[params_file]),
-
-        Node(
-            package='nav2_lifecycle_manager',
-            executable='lifecycle_manager',
-            name='lifecycle_manager_navigation',
-            output='screen',
-            parameters=[{'use_sim_time': use_sim_time},
-                       {'autostart': True},
-                       {'node_names': ['controller_server',
-                                     'planner_server',
-                                     'recoveries_server',
-                                     'bt_navigator']}])
-    ]
-
+    # Get package directories
+    nav2_bringup_dir = get_package_share_directory('nav2_bringup')
+    vacuum_slam_dir = get_package_share_directory('vacuum_slam')
+    vacuum_nav_dir = get_package_share_directory('vacuum_nav')
+    
+    # Include SLAM launch
+    slam_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(vacuum_slam_dir, 'launch', 'slam_toolbox_launch.py')
+        ])
+    )
+    
+    # Nav2 params file
+    nav2_params_path = os.path.join(nav2_bringup_dir, 'params', 'nav2_params.yaml')
+    
+    # Include Nav2 bringup launch
+    nav2_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(nav2_bringup_dir, 'launch', 'navigation_launch.py')
+        ]),
+        launch_arguments={
+            'params_file': nav2_params_path,
+            'use_sim_time': 'false',
+            'autostart': 'true'
+        }.items()
+    )
+    
+    # Launch our navigation node
+    navigation_node = Node(
+        package='vacuum_nav',
+        executable='navigation_node',
+        name='navigation_node',
+        output='screen'
+    )
+    
     return LaunchDescription([
-        DeclareLaunchArgument(
-            'use_sim_time',
-            default_value='false',
-            description='Use simulation (Gazebo) clock if true'),
-        *nav2_launch
+        slam_launch,
+        nav2_launch,
+        navigation_node
     ])

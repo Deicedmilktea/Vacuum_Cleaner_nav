@@ -5,25 +5,21 @@
   <version>0.0.0</version>
   <description>Navigation package for vacuum cleaner robot</description>
   <maintainer email="2544141826@qq.com">reeve</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
+
+  <depend>nav2_bringup</depend>
+  <depend>slam_toolbox</depend>
+
+  <depend>rclpy</depend>
+  <depend>nav2_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf2_ros</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
-
-  <depend>rclpy</depend>
-  <depend>geometry_msgs</depend>
-  <depend>nav2_msgs</depend>
-  <depend>tf2_ros</depend>
-  <depend>nav2_bringup</depend>
-  <depend>nav2_common</depend>
-  <depend>nav2_bt_navigator</depend>
-  <depend>nav2_planner</depend>
-  <depend>nav2_controller</depend>
-  <depend>nav2_recoveries</depend>
-  <depend>nav2_lifecycle_manager</depend>
-  <depend>rviz2</depend>
 
   <export>
     <build_type>ament_python</build_type>
