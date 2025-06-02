@@ -33,10 +33,10 @@ class Stm32InterfaceNode(Node):
         # Subscriber for velocity commands
         self.cmd_vel_subscriber = self.create_subscription(
             Twist,
-            '/cmd_vel',
+            '/cmd_vel_processed',
             self.cmd_vel_callback,
             10)
-        self.get_logger().info("Subscribed to /cmd_vel")
+        self.get_logger().info("Subscribed to /cmd_vel_processed")
 
         # Serial port setup or simulation timer
         self.serial_conn = None

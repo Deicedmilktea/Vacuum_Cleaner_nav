@@ -37,7 +37,7 @@ class KeyboardControllerNode(Node):
     def __init__(self):
         super().__init__("keyboard_controller_node")
 
-        self.publisher_ = self.create_publisher(Twist, "cmd_vel", 10)
+        self.publisher_ = self.create_publisher(Twist, "cmd_vel_processed", 10)
         self.speed = 1
         self.turn = 1
         self.current_linear_x = 0.0

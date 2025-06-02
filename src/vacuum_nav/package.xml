@@ -3,18 +3,22 @@
 <package format="3">
   <name>vacuum_nav</name>
   <version>0.0.0</version>
-  <description>Navigation package for vacuum cleaner robot</description>
+  <description>Vacuum cleaner navigation package with SLAM and Nav2</description>
   <maintainer email="2544141826@qq.com">reeve</maintainer>
   <license>Apache-2.0</license>
 
-  <depend>nav2_bringup</depend>
-  <depend>slam_toolbox</depend>
-
   <depend>rclpy</depend>
+  <depend>nav2_bringup</depend>
+  <depend>nav2_lifecycle_manager</depend>
   <depend>nav2_msgs</depend>
   <depend>geometry_msgs</depend>
-  <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
   <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>slam_toolbox</depend>
+  <depend>nav2_common</depend>
+  <depend>action_msgs</depend>
+  <depend>vacuum_wifi</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

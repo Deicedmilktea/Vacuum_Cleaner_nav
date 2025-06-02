@@ -2,6 +2,10 @@ import rclpy
 from rclpy.node import Node
 import socket
 import threading
+import re
+import json
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import OccupancyGrid
 
 class WifiNode(Node):
     def __init__(self):
@@ -11,14 +15,24 @@ class WifiNode(Node):
         # Declare and retrieve parameters for the TCP server's IP and port
         self.declare_parameter('tcp_server_ip', '0.0.0.0')  # Default IP: 0.0.0.0 (bind to all interfaces)
         self.declare_parameter('tcp_server_port', 8080)  # Default port: 8080
+        self.declare_parameter('map_send_interval', 1.0)  # Default: send map every 5 seconds
         
         self.server_ip = self.get_parameter('tcp_server_ip').get_parameter_value().string_value
         self.server_port = self.get_parameter('tcp_server_port').get_parameter_value().integer_value
+        self.map_send_interval = self.get_parameter('map_send_interval').get_parameter_value().double_value
+        
+        # Initialize ROS2 publishers and subscribers
+        self.cmd_vel_publisher = self.create_publisher(Twist, '/cmd_vel_processed', 10)
+        self.map_subscriber = self.create_subscription(OccupancyGrid, '/map', self.map_callback, 10)
         
         # Initialize server and client socket variables
         self.server_socket = None
         self.client_socket = None
         self.client_address = None
+        self.latest_map = None
+        
+        # Create timer for periodic map sending
+        self.map_timer = self.create_timer(self.map_send_interval, self.send_map_to_client)
         
         # Start the server in a separate thread
         self.thread = threading.Thread(target=self.start_server)
@@ -73,12 +87,15 @@ class WifiNode(Node):
                     break
                 
                 # Decode and log the received message
-                message = data.decode()
+                message = data.decode().strip()
                 self.get_logger().info(f'Received from {self.client_address}: {message}')
                 
-                # Echo the message back to the client
-                self.client_socket.sendall(data)
-                self.get_logger().info(f'Sent to {self.client_address}: {message}')
+                # Parse velocity command in format "v=linear,angular"
+                self.parse_and_publish_velocity(message)
+                
+                # # Send acknowledgment back to the client
+                # ack_message = "OK\n"
+                # self.client_socket.sendall(ack_message.encode())
                 
         except socket.error as e:
             # Log socket errors during client communication
@@ -95,6 +112,71 @@ class WifiNode(Node):
                 self.client_socket = None
             self.get_logger().info(f'Connection with {self.client_address} closed.')
             self.client_address = None
+
+    def parse_and_publish_velocity(self, message):
+        """Parse velocity command in format 'v=linear,angular' and publish as Twist message"""
+        try:
+            # Use regex to match the pattern v=number,number
+            pattern = r'v=([+-]?\d*\.?\d+),([+-]?\d*\.?\d+)'
+            match = re.match(pattern, message)
+            
+            if match:
+                linear_vel = float(match.group(1))
+                angular_vel = float(match.group(2))
+                
+                # Create and publish Twist message
+                twist_msg = Twist()
+                twist_msg.linear.x = linear_vel
+                twist_msg.angular.z = angular_vel
+                
+                self.cmd_vel_publisher.publish(twist_msg)
+                self.get_logger().info(f'Published velocity: linear={linear_vel}, angular={angular_vel}')
+            else:
+                self.get_logger().warn(f'Invalid velocity format: {message}. Expected format: v=linear,angular')
+                
+        except ValueError as e:
+            self.get_logger().error(f'Error parsing velocity values: {e}')
+        except Exception as e:
+            self.get_logger().error(f'Error processing velocity command: {e}')
+    
+    def map_callback(self, msg):
+        """Callback function for /map topic subscription"""
+        self.latest_map = msg
+        self.get_logger().debug('Received map update')
+    
+    def send_map_to_client(self):
+        """Send the latest map data to connected client"""
+        if self.client_socket and self.latest_map:
+            try:
+                # Convert map data to a simplified format for transmission
+                map_data = {
+                    'type': 'map',
+                    'width': self.latest_map.info.width,
+                    'height': self.latest_map.info.height,
+                    'resolution': self.latest_map.info.resolution,
+                    'origin': {
+                        'x': self.latest_map.info.origin.position.x,
+                        'y': self.latest_map.info.origin.position.y,
+                        'z': self.latest_map.info.origin.position.z
+                    },
+                    'data': list(self.latest_map.data)  # Convert to list for JSON serialization
+                }
+                
+                # Serialize to JSON and send
+                json_data = json.dumps(map_data)
+                message = f"MAP:{json_data}\n"
+                
+                self.client_socket.sendall(message.encode())
+                self.get_logger().info(f'Sent map data to client: {self.latest_map.info.width}x{self.latest_map.info.height}')
+                
+            except socket.error as e:
+                self.get_logger().error(f'Error sending map to client: {e}')
+            except Exception as e:
+                self.get_logger().error(f'Error preparing map data: {e}')
+        elif not self.client_socket:
+            self.get_logger().debug('No client connected, skipping map send')
+        elif not self.latest_map:
+            self.get_logger().debug('No map data available, skipping map send')
 
     def destroy_node(self):
         # Gracefully shut down the TCP server
